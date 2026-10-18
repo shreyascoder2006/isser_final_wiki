@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sanjeevani — iGEM IISER Thiruvananthapuram</title>
+<meta name="description" content="Sanjeevani: engineering the moss Physcomitrium patens to remediate heavy-metal mine land and recover India's mineral wealth. An iGEM 2025 project from IISER Thiruvananthapuram." />
+<link rel="icon" href="assets/img/sanjeevani-mark.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="#home" class="brand">
+    <img src="assets/img/sanjeevani-mark.png" alt="Sanjeevani logo" />
+    <span class="wordmark">Sanjeevani<small>iGEM IISER&nbsp;TVM 2025</small></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#project">Project</a></li>
+    <li><a href="#dry-lab">Dry Lab</a></li>
+    <li><a href="#wet-lab">Wet Lab</a></li>
+    <li><a href="#human-practices">Human Practices</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#team">Team</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="icon-btn search-toggle" aria-label="Search this page">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <button class="icon-btn nav-toggle" aria-label="Open menu">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="search-box">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+  <input type="text" placeholder="Search Sanjeevani — try “moss”, “Cu”, “human practices”…" />
+</div>
+<div class="search-results"></div>
+
+<header class="hero" id="home">
+  <div class="hero-media">
+    <!-- Drop the hero loop in at assets/video/hero.mp4 — it will autoplay here.
+         Until then, the moss photo below is shown as a graceful fallback. -->
+    <video autoplay muted loop playsinline poster="assets/img/moss-photo.jpg">
+      <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-fallback" style="display:none; background-image:url('assets/img/moss-photo.jpg');"></div>
+  </div>
+
+  <p class="hero-note">If the video doesn't play, reload or disable low power mode for the best experience.</p>
+
+  <div class="hero-content">
+    <span class="eyebrow">iGEM 2025 · IISER Thiruvananthapuram</span>
+    <h1>Sanjeevani</h1>
+    <p class="tagline">Engineering moss to heal toxic landscapes and reclaim India's mineral wealth.</p>
+  </div>
+
+  <a href="#project" class="scroll-cue" aria-label="Scroll down">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+  </a>
+</header>
+
+<main>
+
+  <!-- ============ JOURNEY / CONTENTS ============ -->
+  <section class="journey" id="journey" data-nav-label="Overview">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">This story runs in six parts</span>
+        <h2>From a cracked mine tailing to a recovered metal.</h2>
+        <p>Sanjeevani treats land remediation and metal recovery as one problem instead of two — engineering a moss that pulls heavy metals out of contaminated ground and holds onto them long enough to be reclaimed.</p>
+      </div>
+
+      <div class="journey-grid">
+        <a class="journey-card reveal" href="#project"><span class="num">01</span><h3>The problem &amp; the moss</h3><p>Why India's mine land stays poisoned, and why a moss is the chassis to fix it.</p></a>
+        <a class="journey-card reveal" href="#project"><span class="num">02</span><h3>Methodology</h3><p>The six-stage pipeline from gene selection to recovered metal.</p></a>
+        <a class="journey-card reveal" href="#dry-lab"><span class="num">03</span><h3>Dry Lab</h3><p>Docking screens, genome-scale modelling, and a metabolic map of the moss.</p></a>
+        <a class="journey-card reveal" href="#wet-lab"><span class="num">04</span><h3>Wet Lab</h3><p>Cloning transporters and chelators from <em>Arabidopsis</em> into <em>Physcomitrium</em>.</p></a>
+        <a class="journey-card reveal" href="#human-practices"><span class="num">05</span><h3>Human Practices</h3><p>Eight conversations — with miners, chemists, hospitals and labs — that changed the project.</p></a>
+        <a class="journey-card reveal" href="#education"><span class="num">06</span><h3>Education &amp; Inclusivity</h3><p>Three phases, three states, three languages — reaching tribal schools across mining belts.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECT : PROBLEM ============ -->
+  <section id="project" data-nav-label="The Problem">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">01 — The Problem</span>
+        <h2>India's mines leave behind land it cannot use.</h2>
+        <p>Tailings and overburden hold copper, iron and other heavy metals in concentrations that poison soil and groundwater — yet stay too dilute for conventional extraction. Remediation and recovery are treated as two separate problems. We are building an organism that does both at once.</p>
+      </div>
+
+      <div class="bar-list reveal">
+        <div class="bar-row"><span class="label highlight">Mining</span><span class="bar-track"><span class="bar-fill highlight" style="width:97%"></span></span><span class="value">18,847 ha</span></div>
+        <div class="bar-row"><span class="label">Roads</span><span class="bar-track"><span class="bar-fill" style="width:100%"></span></span><span class="value">19,424 ha</span></div>
+        <div class="bar-row"><span class="label">Irrigation</span><span class="bar-track"><span class="bar-fill" style="width:69%"></span></span><span class="value">13,344 ha</span></div>
+        <div class="bar-row"><span class="label">Transmission lines</span><span class="bar-track"><span class="bar-fill" style="width:49%"></span></span><span class="value">9,469 ha</span></div>
+        <div class="bar-row"><span class="label">Defence</span><span class="bar-track"><span class="bar-fill" style="width:39%"></span></span><span class="value">7,630 ha</span></div>
+        <div class="bar-row"><span class="label">Railways</span><span class="bar-track"><span class="bar-fill" style="width:25%"></span></span><span class="value">4,769 ha</span></div>
+      </div>
+      <p class="reveal" style="margin-top:0.8rem; font-size:0.82rem; color:var(--ink-soft);">Forest diverted in India by purpose, 2018–19 to 2022–23 (88,903 ha total). Source: MoEFCC reply to Rajya Sabha.</p>
+
+      <p class="reveal" style="margin-top:2.5rem; max-width:62ch; font-size:1.02rem;"><strong>Madhya Pradesh, Odisha, Jharkhand and Chhattisgarh</strong> — the states absorbing the largest share of mining-driven forest loss — are also among the most tribal-dense districts in the country. Contamination hotspots run the length of the mineral belt: copper around Khetri, Malanjkhand and the Singhbhum belt; iron across Bailadila, Sundargarh and Koida; hexavalent chromium in Odisha's Sukinda Valley; and rare-earth tailings at Chatrapur, Manavalakurichi and Chavara.</p>
+    </div>
+  </section>
+
+  <!-- ============ PROJECT : WHY MOSS + CHASSIS ============ -->
+  <section class="journey" id="moss" data-nav-label="Why Moss">
+    <div class="container split">
+      <div class="reveal" style="order:2;">
+        <span class="eyebrow">Why Moss?</span>
+        <h2 style="margin-top:0.6rem; font-size:clamp(1.7rem,3vw,2.3rem);">Moss absorbs metals across its whole surface.</h2>
+        <p style="margin-top:1rem; color:var(--ink-soft);">No cuticle, no true vascular tissue — every cell meets the water around it. That is why mosses are already used as pollution monitors, and why they are a better starting point than a crop plant.</p>
+        <ul class="split-list">
+          <li><b>01</b><span><strong>Whole-body uptake</strong> — metal ions bind and cross the membrane over the entire tissue surface.</span></li>
+          <li><b>02</b><span><strong>Grows on bare rock</strong> — colonises disturbed, nutrient-poor substrate where crops cannot establish.</span></li>
+          <li><b>03</b><span><strong>Harvestable biomass</strong> — metal leaves the site with the moss mat, instead of moving down into groundwater.</span></li>
+        </ul>
+      </div>
+      <img class="reveal" src="assets/img/moss-photo.jpg" alt="Physcomitrium patens moss" style="order:1;" />
+    </div>
+  </section>
+
+  <section id="chassis" data-nav-label="Our Chassis">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our Chassis</span>
+        <h2><em>Physcomitrium patens</em> is a chassis we can engineer.</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal"><h4>Fully sequenced genome</h4><p>A mature molecular toolkit built up over two decades of moss genetics.</p></div>
+        <div class="card reveal"><h4>Dominant haploid phase</h4><p>A single edit gives a readable phenotype — no masking by a second allele.</p></div>
+        <div class="card reveal"><h4>Efficient homologous recombination</h4><p>Supports targeted integration at precise genomic loci.</p></div>
+        <div class="card reveal"><h4>Regenerating protonemal tissue</h4><p>New plants regenerate from single cells, so transformation scales.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METHODOLOGY ============ -->
+  <section class="section-dark" id="methodology" data-nav-label="Methodology">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">02 — Methodology &amp; Thinking</span>
+        <h2>Our pipeline runs from gene to recovered metal.</h2>
+      </div>
+      <div class="pipeline">
+        <div class="step reveal"><span class="step-no">Step 01</span><h4>Select genes</h4><p>Transporters and storage proteins for Cu and Fe.</p></div>
+        <div class="step reveal"><span class="step-no">Step 02</span><h4>Model in silico</h4><p>Structure and metal-binding analysis before cloning.</p></div>
+        <div class="step reveal"><span class="step-no">Step 03</span><h4>Build constructs</h4><p>Assemble and amplify in <em>E. coli</em> DH5α.</p></div>
+        <div class="step reveal"><span class="step-no">Step 04</span><h4>Transform moss</h4><p>Protoplast transformation of protonemal tissue.</p></div>
+        <div class="step reveal"><span class="step-no">Step 05</span><h4>Assay uptake</h4><p>Tolerance and accumulation measured against wild type.</p></div>
+        <div class="step reveal"><span class="step-no">Step 06</span><h4>Recover metal</h4><p>Harvest biomass and reclaim the bound metal.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DRY LAB ============ -->
+  <section class="section-dark" id="dry-lab" data-nav-label="Dry Lab">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">03 — Dry Lab</span>
+        <h2>Choosing the right parts, in silico, before touching a plate.</h2>
+        <p>Two computational threads run in parallel: a docking screen to pick the best metal-binding chelator, and a genome-scale metabolic model of the moss itself.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card reveal">
+          <h4>Metallothionein docking screen</h4>
+          <p>Seven candidate metallothioneins — including AtMT4a, AtMT4b, PpMT2, AtMT2a/b and AtMT3 — were cross-validated with <strong>AutoDock4</strong> and <strong>HADDOCK</strong> against five metals: Fe, Cu, Cd, Hg and Pb.</p>
+          <p style="margin-top:0.7rem;"><strong style="color:var(--accent)">AtMT4b ranked first</strong>, placing top-3 in all 10 of 10 metal × method combinations — no other candidate matched it.</p>
+        </div>
+        <div class="card reveal">
+          <h4>Genome-scale metabolic model</h4>
+          <p>The <em>P. patens</em> genome was loaded into <strong>KBase</strong>, a draft model reconstructed via <strong>PlantSEED</strong>, genes cross-checked with <strong>OrthoFinder</strong>, and viability confirmed with a preliminary flux balance analysis (FBA).</p>
+        </div>
+        <div class="card reveal">
+          <h4>Where the model stands</h4>
+          <p><strong style="color:var(--accent)">468 of 1,085</strong> total reactions — 43% — now carry gene-level evidence. Confirmed Cu/Fe/Zn transport reactions from Arabidopsis-derived models (AraGEM, AraRoot) are being validated against the <em>P. patens</em> network next.</p>
+        </div>
+      </div>
+
+      <div class="stat-strip reveal">
+        <div class="stat"><b>7</b><span>metallothionein candidates screened</span></div>
+        <div class="stat"><b>10/10</b><span>metal × method wins for AtMT4b</span></div>
+        <div class="stat"><b>43%</b><span>of reactions gene-confirmed</span></div>
+        <div class="stat"><b>1,085</b><span>reactions in the draft model</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WET LAB ============ -->
+  <section id="wet-lab" data-nav-label="Wet Lab">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">04 — Wet Lab</span>
+        <h2>From <em>Arabidopsis</em> gene to moss, in six stages.</h2>
+      </div>
+
+      <div class="pipeline" style="margin-top:1.5rem;">
+        <div class="step reveal"><span class="step-no">01</span><h4>Sourcing the genes</h4><p>gDNA and mRNA pulled from <em>Arabidopsis thaliana</em> Col-0.</p></div>
+        <div class="step reveal"><span class="step-no">02</span><h4>Building the construct</h4><p>Vector digestion, ligation, and transformation into <em>E. coli</em> DH5α / TOP10.</p></div>
+        <div class="step reveal"><span class="step-no">03</span><h4>Confirming the clone</h4><p>Colony PCR, restriction digest and flanking-primer PCR against the vector map.</p></div>
+        <div class="step reveal"><span class="step-no">04</span><h4>Constructs designed</h4><p>Maps finalised for moss transformation and <em>E. coli</em> expression.</p></div>
+        <div class="step reveal"><span class="step-no">05</span><h4>Into the moss</h4><p>Moss culture, rock-adhesion tests and surface metal-absorption assays.</p></div>
+        <div class="step reveal"><span class="step-no">06</span><h4>Where we stand</h4><p>Status below.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark" id="genes" data-nav-label="The Genes">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Three genes do the uptake and the storage</span>
+        <h2>Transporters bring metal in. A chelator keeps it there.</h2>
+      </div>
+
+      <div class="gene-table">
+        <div class="gene-row reveal">
+          <div><span class="gene-name">COPT1</span><span class="gene-source">from Arabidopsis thaliana</span></div>
+          <p>High-affinity copper transporter at the plasma membrane. Cloned and confirmed — the first construct through the full pipeline. Fused in-frame to MT4b via a P2A self-cleaving peptide: <code>pTFH15.3_COPT1::2A::MT4</code>.</p>
+        </div>
+        <div class="gene-row reveal">
+          <div><span class="gene-name">IRT1</span><span class="gene-source">from Arabidopsis thaliana</span></div>
+          <p>Iron-Regulated Transporter 1 — a broad-spectrum divalent metal transporter (Fe²⁺, plus Zn, Mn, Cd) acting through the FIT/AHA2/FRO2 uptake pathway. Construct ordered: <code>pTFH15.3_IRT1::2A::MT4</code>.</p>
+        </div>
+        <div class="gene-row reveal">
+          <div><span class="gene-name">AtMT4b</span><span class="gene-source">metallothionein, A. thaliana</span></div>
+          <p>Cysteine-rich intracellular chelator that sequesters metal once it's inside the cell — the top performer from our docking screen, chosen over six other candidates. Construct ordered alongside IRT1.</p>
+        </div>
+        <div class="gene-row reveal">
+          <div><span class="gene-name">NREET1</span><span class="gene-source">from Dicranopteris linearis</span></div>
+          <p>Plasma-membrane rare-earth-element transporter from a REE-hyperaccumulating fern, carried as a standalone construct to extend uptake toward lanthanum and neodymium.</p>
+        </div>
+      </div>
+
+      <p class="status-quote reveal">“COPT1 is cloned and confirmed; IRT1 and AtMT4b constructs are ordered and moving into expression, with moss culture running in parallel.”</p>
+
+      <p class="reveal" style="margin-top:2rem; font-size:0.86rem; color:#9fc3ba; max-width:72ch;">All constructs are built on <strong>pTFH15.3</strong>, a standard <em>P. patens</em> community transformation vector (~7.5 kb) carrying an Act1-driven nptII selection cassette and Pphb7 homology arms for targeted integration into the moss genome.</p>
+    </div>
+  </section>
+
+  <!-- ============ HUMAN PRACTICES ============ -->
+  <section id="human-practices" data-nav-label="Human Practices">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">05 — Human Practices</span>
+        <h2>Eight conversations that changed what we built.</h2>
+        <p>We didn't design this project at a desk alone — it was reshaped, repeatedly, by the people closest to the problem.</p>
+      </div>
+
+      <div class="hp-grid">
+        <div class="hp-card reveal">
+          <span class="eyebrow">Repositioning the science</span>
+          <ul>
+            <li><b>ARCI (Dr. Raghavan Gopalan)</b>REE recovery is midstream-limited, not primary — reframed Sanjeevani as a supplement to conventional extraction, not a replacement.</li>
+            <li><b>NALCO</b>Similar attempts exist globally — grounded our framing in a shared, ongoing effort rather than an unprecedented fix.</li>
+          </ul>
+        </div>
+        <div class="hp-card reveal">
+          <span class="eyebrow">Protecting project integrity</span>
+          <ul>
+            <li><b>Tata Steel</b>Offered funding for a side project. We declined it to protect the core project's timeline and integrity.</li>
+          </ul>
+        </div>
+        <div class="hp-card reveal">
+          <span class="eyebrow">Methodology changed by experts</span>
+          <ul>
+            <li><b>Dr. Anjan Banerjee's Lab, IISER Pune</b>Shared a 1-day moss protocol and trained us directly — halving our 2-day protocol turnaround.</li>
+            <li><b>Kerala Dept. of Mining &amp; Geology</b>Their Junior Chemist flagged the limits of our assay — we switched metal-uptake quantification from AAS to ICP-MS.</li>
+          </ul>
+        </div>
+        <div class="hp-card reveal">
+          <span class="eyebrow">The human cost, made concrete</span>
+          <ul>
+            <li><b>IREL / Chatrapur Hospital</b>Rising kidney disease near radioactive tailings gave the project a human-health dimension, not just an ecological one.</li>
+            <li><b>OMC — Sukinda Valley</b>Carcinogenic chromite is restricting fungal fruiting bodies on-site — reinforcing the case for an engineered, metal-tolerant chassis.</li>
+            <li><b>Odisha State &amp; Tribal Museums</b>Interns from mining belts described displaced communities, shifting our framing from ecological to directly human.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION & INCLUSIVITY ============ -->
+  <section class="section-dark" id="education" data-nav-label="Education & Inclusivity">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">06 — Education &amp; Inclusivity</span>
+        <h2>Not one event — three phases, three states, three languages.</h2>
+      </div>
+
+      <div class="big-stats">
+        <div class="stat reveal"><b>8,000</b><span>reached virtually, Phase 1 — 117 tribal schools, grade 9</span></div>
+        <div class="stat reveal"><b>40,000</b><span>reached on-ground, Phase 2 — 37 schools</span></div>
+        <div class="stat reveal"><b>30+</b><span>tribes represented across Paderu</span></div>
+        <div class="stat reveal"><b>3</b><span>states: Andhra Pradesh, Odisha, Maharashtra</span></div>
+      </div>
+
+      <p class="reveal" style="max-width:68ch; font-size:1.02rem; color:#e3ede9;">Across three phases in Andhra Pradesh alone we reached <strong style="color:var(--accent)">48,000 students</strong> — in their own language — before counting Odisha and Maharashtra.</p>
+
+      <div class="section-head reveal" style="margin-top:3.5rem;">
+        <span class="eyebrow">Big is not the same as inclusive</span>
+        <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);">Each pillar came from what a community actually needed — not what we assumed.</h2>
+        <p>That is the difference between outreach and inclusivity.</p>
+      </div>
+
+      <div class="pillar-row">
+        <div class="card reveal"><h4>Language access</h4><p>Sessions delivered in Telugu, Odia and Marathi by speakers from matching linguistic backgrounds — not translated from English.</p></div>
+        <div class="card reveal"><h4>A real barrier, removed</h4><p>Menstrual hygiene kits distributed in Odisha after learning that menstruation — not lack of interest — was what kept girls out of school.</p></div>
+        <div class="card reveal"><h4>Every readiness level</h4><p>Career guidance that presents science as a diverse path beyond engineering and medicine, built to spark curiosity first.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SDGs ============ -->
+  <section id="sdgs" data-nav-label="SDGs">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">The goals we commit to</span>
+        <h2>6 of 17 Sustainable Development Goals, acted on together.</h2>
+      </div>
+      <div class="sdg-strip reveal">
+        <div class="sdg-chip"><b>3</b><span>Good Health &amp; Well-Being</span></div>
+        <div class="sdg-chip"><b>6</b><span>Clean Water &amp; Sanitation</span></div>
+        <div class="sdg-chip"><b>9</b><span>Industry, Innovation &amp; Infrastructure</span></div>
+        <div class="sdg-chip"><b>12</b><span>Responsible Consumption &amp; Production</span></div>
+        <div class="sdg-chip"><b>15</b><span>Life on Land</span></div>
+        <div class="sdg-chip"><b>17</b><span>Partnerships for the Goals</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section class="journey" id="team" data-nav-label="Team">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Team Sanjeevani</span>
+        <h2>iGEM IISER Thiruvananthapuram, 2025.</h2>
+      </div>
+
+      <div class="pi-row reveal">
+        <div class="pi-card"><span>Principal Investigator</span><b>Dr. Boominathan Mohanasundaram</b></div>
+        <div class="pi-card"><span>Principal Investigator</span><b>Dr. Ashutosh Pandey</b></div>
+      </div>
+
+      <div class="member-grid reveal">
+        <div class="member-pill">Anika Patil</div>
+        <div class="member-pill">Kota Janardhan Sai</div>
+        <div class="member-pill">Aiswariya Rajendran</div>
+        <div class="member-pill">Ritwija Das</div>
+        <div class="member-pill">Chitranjan</div>
+        <div class="member-pill">Aaryaman Rastogi</div>
+        <div class="member-pill">Harshal Chavan</div>
+        <div class="member-pill">Ayush Singh</div>
+        <div class="member-pill">Alfin John R</div>
+        <div class="member-pill">Jessica Banka</div>
+        <div class="member-pill">Malla Monisha</div>
+        <div class="member-pill">Sindhu Ramesh</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="wordmark">Sanjeevani</span>
+        <p>Engineering moss to heal toxic landscapes and reclaim India's mineral wealth. An iGEM 2025 project from IISER Thiruvananthapuram.</p>
+        <div class="footer-contact" style="margin-top:1.2rem;">
+          <a class="pill" href="mailto:igem@iisertvm.ac.in">igem@iisertvm.ac.in</a>
+          <a class="pill" href="#">@igem_iisertvm</a>
+        </div>
+      </div>
+      <div class="footer-logos">
+        <img src="assets/img/igem-iisertvm-mark.png" alt="iGEM IISER TVM logo" />
+        <img src="assets/img/iisertvm-mark.png" alt="IISER Thiruvananthapuram logo" />
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Team Sanjeevani, iGEM IISER Thiruvananthapuram.</span>
+      <span class="disclosure">AI usage disclosure: Claude (Anthropic) was used to assist with drafting, editing and formatting this site. All scientific content, data and conclusions were reviewed and verified by the team.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
