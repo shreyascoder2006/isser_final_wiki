@@ -325,6 +325,14 @@ section {
   color: #e3ede9;
 }
 
+.hero-content .hero-credit {
+  margin-top: 1.3rem;
+  font-size: 0.74rem;
+  max-width: 46ch;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+}
+
 .hero-note {
   position: absolute;
   right: 1.1rem;
