@@ -36,7 +36,10 @@
       <span class="intro__meta">PORTFOLIO · 2026</span>
       <h1 class="intro__name"><span>Shreyas</span> <span>Kale</span></h1>
       <span class="intro__role">GEN AI · FULL STACK · ML</span>
-      <div class="intro__bar"><i></i></div>
+      <div class="intro__loader">
+        <div class="intro__bar"><i id="introBar"></i></div>
+        <p class="intro__count"><span id="introCount">0</span><em>%</em></p>
+      </div>
     </div>
   </div>
 
@@ -114,11 +117,12 @@
 
       <div class="hero__top">
         <div class="frame frame--stat" data-label="achievements.json">
-          <div class="statpill" data-hackathon>
-            <span class="statpill__num">7×</span>
-            <strong>hackathon wins</strong>
-            <span>plus a case-study win and Top 8 at ICPC college level</span>
-          </div>
+          <ul class="statpill" data-hackathon>
+            <li><span class="statpill__num">7×</span><span class="statpill__txt">Hackathon Winner</span></li>
+            <li><span class="statpill__num">1×</span><span class="statpill__txt">Case-Study Winner</span></li>
+            <li><span class="statpill__num statpill__num--ghost">Top 8</span><span class="statpill__txt">ICPC
+                <em>@ College Level</em></span></li>
+          </ul>
         </div>
       </div>
 
@@ -179,7 +183,61 @@
               prototype beats a beautiful deck.
             </p>
 
-            <p class="mono-label mt-auto">CAPABILITIES</p>
+            <section class="gh" aria-label="Public repositories">
+              <div class="gh__head">
+                <span class="mono-label">GITHUB.LOG</span>
+                <a href="https://github.com/shreyascoder2006" target="_blank" rel="noopener" data-clickable>
+                  @shreyascoder2006 <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+
+              <div class="gh__summary">
+                <p class="gh__count"><strong>60</strong><span>public repositories</span></p>
+                <div class="gh__bar" role="img"
+                  aria-label="Primary language across the 35 repositories GitHub labels: TypeScript 14, JavaScript 8, HTML 6, Python 5, Java 2">
+                  <i style="--w:40%;--c:#3178c6"></i><i style="--w:23%;--c:#f1e05a"></i>
+                  <i style="--w:17%;--c:#e34c26"></i><i style="--w:14%;--c:#3572a5"></i>
+                  <i style="--w:6%;--c:#b07219"></i>
+                </div>
+                <ul class="gh__langs">
+                  <li><span class="lang-dot" style="--c:#3178c6"></span>TypeScript <em>14</em></li>
+                  <li><span class="lang-dot" style="--c:#f1e05a"></span>JavaScript <em>8</em></li>
+                  <li><span class="lang-dot" style="--c:#e34c26"></span>HTML <em>6</em></li>
+                  <li><span class="lang-dot" style="--c:#3572a5"></span>Python <em>5</em></li>
+                  <li><span class="lang-dot" style="--c:#b07219"></span>Java <em>2</em></li>
+                </ul>
+              </div>
+
+              <p class="mono-label">RECENTLY PUSHED</p>
+              <ul class="gh__list">
+                <li><a href="https://github.com/shreyascoder2006/brain_pass" target="_blank" rel="noopener"
+                    data-clickable><span class="lang-dot" style="--c:#e34c26"></span>brain_pass<em>Oct 2026</em></a>
+                </li>
+                <li><a href="https://github.com/shreyascoder2006/rodrigues_fintech" target="_blank" rel="noopener"
+                    data-clickable><span class="lang-dot" style="--c:#3178c6"></span>rodrigues_fintech<em>Oct
+                      2026</em></a></li>
+                <li><a href="https://github.com/shreyascoder2006/fusion_earth" target="_blank" rel="noopener"
+                    data-clickable><span class="lang-dot" style="--c:#3178c6"></span>fusion_earth<em>Oct
+                      2026</em></a></li>
+                <li><a href="https://github.com/shreyascoder2006/Jarvis_Shreyas" target="_blank" rel="noopener"
+                    data-clickable><span class="lang-dot" style="--c:#3572a5"></span>Jarvis_Shreyas<em>Oct
+                      2026</em></a></li>
+                <li><a href="https://github.com/shreyascoder2006/Sankalp_Base" target="_blank" rel="noopener"
+                    data-clickable><span class="lang-dot" style="--c:#3178c6"></span>Sankalp_Base<em>Oct
+                      2026</em></a></li>
+                <li><a href="https://github.com/shreyascoder2006/near_home_360" target="_blank" rel="noopener"
+                    data-clickable><span class="lang-dot" style="--c:#3572a5"></span>near_home_360<em>Sep
+                      2026</em></a></li>
+                <li><a href="https://github.com/shreyascoder2006/ps_banks" target="_blank" rel="noopener"
+                    data-clickable><span class="lang-dot" style="--c:#f1e05a"></span>ps_banks<em>Sep 2026</em></a>
+                </li>
+                <li><a href="https://github.com/shreyascoder2006/gandhinagar_hackout" target="_blank" rel="noopener"
+                    data-clickable><span class="lang-dot" style="--c:#3178c6"></span>gandhinagar_hackout<em>Sep
+                      2026</em></a></li>
+              </ul>
+            </section>
+
+            <p class="mono-label">CAPABILITIES</p>
             <ul class="chips chips--cap">
               <li><span class="chips__ico">◆</span>GenAI &amp; LLM Agents</li>
               <li><span class="chips__ico">&lt;/&gt;</span>Full Stack Dev</li>
@@ -646,22 +704,6 @@
           </article>
         </div>
 
-        <div class="frame frame--row" data-label="exp /03">
-          <article class="exprow" data-lift>
-            <span class="exprow__idx">/03</span>
-            <div class="exprow__main">
-              <h3>DJ Sanghvi College of Engineering <span class="badge"><span class="dot dot--orange"></span>B.TECH ·
-                  AI &amp; DS</span></h3>
-              <p class="exprow__role">Artificial Intelligence &amp; Data Science</p>
-              <ul class="chips chips--mono">
-                <li>CGPA 9.20</li><li>Mumbai</li><li>Class of 2028</li>
-              </ul>
-              <p class="exprow__peek">7× HACKATHON WINNER · TOP 8 ICPC COLLEGE LEVEL 2025</p>
-            </div>
-            <span class="exprow__date">Sep 2024 &mdash; May 2028</span>
-            <span class="exprow__arrow" aria-hidden="true">↗</span>
-          </article>
-        </div>
       </div>
 
       <div class="wins">

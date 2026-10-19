@@ -8,17 +8,41 @@
   var finePointer = window.matchMedia('(pointer: fine)').matches;
   var clamp = function (v, a, b) { return v < a ? a : v > b ? b : v; };
 
-  /* ---------- intro ---------- */
+  /* ---------- intro ----------
+     HOLD_MS is how long the name stays up while the counter runs 0 → 100.   */
+  var HOLD_MS = 5000;
+
   (function intro() {
     var el = document.getElementById('intro');
     if (!el) return;
+    var out = document.getElementById('introCount');
+    var bar = document.getElementById('introBar');
     document.body.style.overflow = 'hidden';
-    var done = function () {
+
+    var t0 = performance.now();
+    (function run(now) {
+      var p = clamp((now - t0) / HOLD_MS, 0, 1);
+      var v = Math.round(p * 100);
+      if (out) out.textContent = v;
+      if (bar) bar.style.width = v + '%';
+      if (p < 1) {
+        window.requestAnimationFrame(run);
+      } else {
+        el.classList.add('is-done');
+        document.body.style.overflow = '';
+        window.setTimeout(function () { el.remove(); }, 800);
+      }
+    })(t0);
+
+    // Never strand the page if rAF is throttled (background tab, etc.)
+    window.setTimeout(function () {
+      if (!document.body.contains(el)) return;
+      if (out) out.textContent = '100';
+      if (bar) bar.style.width = '100%';
       el.classList.add('is-done');
       document.body.style.overflow = '';
       window.setTimeout(function () { el.remove(); }, 800);
-    };
-    window.setTimeout(done, reduced ? 350 : 2000);
+    }, HOLD_MS + 2500);
   })();
 
   /* ---------- ruler ticks ---------- */

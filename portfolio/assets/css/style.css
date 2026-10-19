@@ -178,11 +178,16 @@ h1, h2, h3, p, figure { margin: 0; }
 .intro__name span:nth-child(1) { animation-delay: .08s; }
 .intro__name span:nth-child(2) { animation-delay: .2s; color: var(--accent); }
 .intro__role { font-family: var(--mono); font-size: clamp(10px, 1.6vw, 13px); letter-spacing: .34em; color: var(--ink-70); }
-.intro__bar { width: min(260px, 60vw); height: 2px; margin: 26px auto 0; background: rgba(18, 32, 58, .12); border-radius: 2px; overflow: hidden; }
-.intro__bar i { display: block; height: 100%; width: 0; background: var(--accent); animation: introBar 1.5s var(--ease) forwards .15s; }
+.intro__loader { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 34px; }
+.intro__bar { width: min(320px, 56vw); height: 3px; background: rgba(18, 32, 58, .12); border-radius: 3px; overflow: hidden; }
+.intro__bar i { display: block; height: 100%; width: 0; background: var(--accent); }
+.intro__count {
+  font-family: var(--mono); font-size: 15px; font-weight: 500; color: var(--ink);
+  font-variant-numeric: tabular-nums; min-width: 58px; text-align: left;
+}
+.intro__count em { font-style: normal; color: var(--accent); margin-left: 1px; }
 
 @keyframes introUp { to { opacity: 1; transform: none; } }
-@keyframes introBar { to { width: 100%; } }
 
 /* ============================================================
    CURSOR
@@ -349,13 +354,30 @@ h1, h2, h3, p, figure { margin: 0; }
 .hero > *:not(.sky) { position: relative; z-index: 1; }
 .hero__top { display: flex; justify-content: center; padding-top: 32px; }
 .statpill {
-  display: inline-flex; align-items: center; gap: 11px; flex-wrap: wrap; justify-content: center;
-  background: #fff; border-radius: 16px; padding: 14px 22px; box-shadow: var(--shadow);
-  font-size: 15px; text-align: center;
+  display: flex; align-items: stretch; flex-wrap: wrap; justify-content: center;
+  background: #fff; border-radius: 16px; padding: 10px 12px; box-shadow: var(--shadow);
 }
-.statpill__num { background: var(--accent); color: #fff; font-weight: 600; font-size: 13px; padding: 4px 9px; border-radius: 8px; }
-.statpill strong { color: var(--accent); font-weight: 600; }
-.statpill span:last-child { color: var(--ink-70); }
+.statpill li {
+  display: flex; align-items: center; gap: 10px; padding: 7px 16px;
+  border-left: 1px solid var(--line);
+}
+.statpill li:first-child { border-left: 0; }
+.statpill__num {
+  background: var(--accent); color: #fff; font-weight: 600; font-size: 13px;
+  padding: 5px 9px; border-radius: 8px; line-height: 1; white-space: nowrap;
+}
+.statpill__num--ghost { background: var(--night); }
+.statpill__txt { font-size: 15px; font-weight: 600; color: var(--ink); white-space: nowrap; }
+.statpill__txt em {
+  display: block; font-style: normal; font-family: var(--mono); font-size: 10px;
+  letter-spacing: .12em; font-weight: 400; color: var(--ink-45); text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .statpill { padding: 8px; }
+  .statpill li { border-left: 0; padding: 6px 10px; }
+  .statpill__txt { font-size: 14px; }
+}
 
 .hero__mid { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; margin: 18px 0; }
 .hero__canvasWrap { width: 100%; max-width: 880px; }
@@ -387,7 +409,7 @@ h1, h2, h3, p, figure { margin: 0; }
 .card__head { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
 .quote { font-size: 44px; line-height: .6; color: var(--accent); font-weight: 700; }
 
-.card--statement { display: flex; flex-direction: column; height: 100%; min-height: 420px; }
+.card--statement { display: flex; flex-direction: column; }
 .statement { font-size: clamp(26px, 3.3vw, 38px); line-height: 1.12; font-weight: 600; letter-spacing: -.02em; margin-bottom: 18px; }
 .statement em { font-style: normal; color: var(--accent); }
 
@@ -402,6 +424,34 @@ h1, h2, h3, p, figure { margin: 0; }
 .chips--cap li { font-size: 14px; padding: 9px 15px; }
 .chips__ico { color: var(--accent); font-size: 11px; }
 .chips--mono li { font-family: var(--mono); font-size: 11.5px; letter-spacing: .02em; background: #f4f6f9; border-color: transparent; padding: 6px 11px; border-radius: 8px; }
+
+/* GitHub panel — fills the statement column against the taller right rail */
+.gh { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+.gh__head { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 16px; }
+.gh__head a { font-family: var(--mono); font-size: 12px; color: var(--ink-70); transition: color .2s; }
+.gh__head a:hover { color: var(--accent); }
+
+.gh__summary { background: var(--paper-2); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin-bottom: 20px; }
+.gh__count { display: flex; align-items: baseline; gap: 9px; }
+.gh__count strong { font-size: 30px; font-weight: 700; letter-spacing: -.02em; }
+.gh__count span { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-45); }
+.gh__bar { display: flex; gap: 2px; height: 6px; margin: 13px 0 12px; }
+.gh__bar i { width: var(--w); background: var(--c); border-radius: 2px; }
+.gh__langs { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.gh__langs li { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--ink-70); }
+.gh__langs em { font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--ink-45); }
+.lang-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--c); flex: none; }
+
+.gh__list { display: grid; gap: 1px; margin-top: 10px; }
+.gh__list a {
+  display: flex; align-items: center; gap: 10px; padding: 9px 2px;
+  border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 12.5px;
+  transition: color .2s, padding-left .2s var(--ease);
+}
+.gh__list li:last-child a { border-bottom: 0; }
+.gh__list a:hover { color: var(--accent); padding-left: 6px; }
+.gh__list em { margin-left: auto; font-style: normal; font-size: 11px; color: var(--ink-45); }
+.gh + .mono-label { margin-top: 26px; }
 
 .about__side { display: grid; gap: 22px; }
 
