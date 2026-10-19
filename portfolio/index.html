@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Shreyas Kale — GenAI, Full Stack &amp; ML</title>
+  <meta name="description"
+    content="Shreyas Kale is an AI &amp; Data Science student and GenAI-focused full stack developer building AI-powered web platforms and real-time applications." />
+  <meta name="author" content="Shreyas Kale" />
+
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shreyas Kale — GenAI, Full Stack &amp; ML" />
+  <meta property="og:description"
+    content="Solving real world problems with technology. GenAI, full stack and ML projects by Shreyas Kale." />
+  <meta property="og:image" content="assets/img/shreyas.png" />
+  <meta property="og:image:alt" content="Shreyas Kale" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0f1d'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23ff5a1f' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23ff5a1f'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://api.fontshare.com/v2/css?f%5B%5D=clash-display@400,500,600,700&amp;f%5B%5D=jet-brains-mono@400,500&amp;display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#work">Skip to content</a>
+
+  <!-- ░░ INTRO ░░ the name lands before anything else does ░░ -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <span class="intro__meta">PORTFOLIO · 2026</span>
+      <h1 class="intro__name"><span>Shreyas</span> <span>Kale</span></h1>
+      <span class="intro__role">GEN AI · FULL STACK · ML</span>
+      <div class="intro__bar"><i></i></div>
+    </div>
+  </div>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cursor-layer" id="cursorLayer" aria-hidden="true">
+    <svg class="cursor__arrow" width="22" height="24" viewBox="0 0 22 24" fill="none">
+      <path d="M2 1.5L19.5 11.5L11.8 13.4L8.3 21L2 1.5Z" fill="#2f6bff" stroke="#fff" stroke-width="1.4"
+        stroke-linejoin="round" />
+    </svg>
+    <span class="cursor__tag">You</span>
+  </div>
+
+  <!-- ░░ TOP RULER BAR ░░ -->
+  <header class="topbar">
+    <div class="topbar__id">
+      <span class="topbar__mark" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 14 14">
+          <circle cx="7" cy="7" r="5" fill="none" stroke="#ff5a1f" stroke-width="1.6" />
+          <circle cx="7" cy="7" r="1.5" fill="#ff5a1f" />
+        </svg>
+      </span>
+      <span class="topbar__name">SHREYASKALE</span>
+    </div>
+    <span class="topbar__pct" id="scrollPct">0%</span>
+    <div class="ruler" id="ruler" aria-hidden="true">
+      <div class="ruler__fill" id="rulerFill"></div>
+      <div class="ruler__ticks" id="rulerTicks"></div>
+    </div>
+    <div class="topbar__live">
+      <span class="dot dot--green"></span>
+      <span>LIVE</span>
+      <span id="clock">--:--:-- --</span>
+    </div>
+  </header>
+
+  <!-- ░░ FLOATING CHROME ░░ -->
+  <div class="chrome" id="chrome">
+    <div class="chrome__pill chrome__pill--status">
+      <span class="dot dot--green"></span>
+      <span>available for internships</span>
+    </div>
+
+    <nav class="island" aria-label="Primary">
+      <a href="#home" class="island__link is-active" data-nav>Home</a>
+      <a href="#about" class="island__link" data-nav>About</a>
+      <a href="#work" class="island__link" data-nav>Work</a>
+      <a href="#experience" class="island__link" data-nav>Experience</a>
+      <a href="#contact" class="island__link island__link--cta" data-nav>Contact</a>
+      <button class="island__sound" id="soundBtn" type="button" aria-pressed="false" aria-label="Toggle ambient sound">
+        <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </nav>
+
+    <a class="chrome__pill chrome__pill--mail" href="mailto:shreyaskale06@gmail.com" data-mail>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ff5a1f" stroke-width="2"
+        aria-hidden="true">
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+        <path d="m2 7 10 6 10-6" />
+      </svg>
+      <span>shreyaskale06@gmail.com</span>
+    </a>
+  </div>
+
+  <main>
+    <!-- ░░░░░░ HERO ░░░░░░ -->
+    <section class="hero" id="home">
+      <div class="sky" aria-hidden="true">
+        <span class="cloud" style="--t:12%;--l:6%;--w:34vw;--h:12vw;--o:.75;--b:34px;--d:0s"></span>
+        <span class="cloud" style="--t:22%;--l:62%;--w:40vw;--h:14vw;--o:.6;--b:44px;--d:-6s"></span>
+        <span class="cloud" style="--t:48%;--l:-8%;--w:46vw;--h:16vw;--o:.5;--b:52px;--d:-12s"></span>
+        <span class="cloud" style="--t:58%;--l:70%;--w:38vw;--h:13vw;--o:.55;--b:40px;--d:-18s"></span>
+        <span class="cloud" style="--t:76%;--l:24%;--w:52vw;--h:18vw;--o:.45;--b:60px;--d:-24s"></span>
+        <span class="cloud" style="--t:4%;--l:38%;--w:30vw;--h:11vw;--o:.5;--b:38px;--d:-30s"></span>
+      </div>
+
+      <div class="hero__top">
+        <div class="frame frame--stat" data-label="achievements.json">
+          <div class="statpill" data-hackathon>
+            <span class="statpill__num">7×</span>
+            <strong>hackathon wins</strong>
+            <span>plus a case-study win and Top 8 at ICPC college level</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__mid">
+        <h1 class="sr-only">Solving real world problems with technology.</h1>
+        <div class="hero__canvasWrap">
+          <canvas id="heroCanvas" aria-hidden="true"></canvas>
+        </div>
+        <p class="hero__kicker">GEN AI &middot; FULL STACK &middot; ML <span>&#10022;</span></p>
+
+        <div class="frame frame--lede" data-label="do not drag">
+          <p class="hero__lede">
+            AI &amp; Data Science student and GenAI-focused full stack developer building AI-powered web platforms
+            and real-time applications.
+          </p>
+        </div>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="assets/Shreyas_Kale_Resume.pdf" target="_blank" rel="noopener"
+            data-clickable>View Resume <span aria-hidden="true">↗</span></a>
+          <a class="btn btn--ghost" href="#work" data-nav data-clickable>See the work</a>
+        </div>
+      </div>
+
+      <div class="hero__foot">
+        <div>
+          <span>MUMBAI, INDIA</span>
+          <span>DJ SANGHVI &middot; AI &amp; DATA SCIENCE</span>
+        </div>
+        <div class="ta-r">
+          <span>OPEN FOR 2026</span>
+          <span>INTERNSHIPS AND FREELANCE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░░░░ ABOUT ░░░░░░ -->
+    <section class="section about" id="about">
+      <p class="eyebrow">a little about me</p>
+      <h2 class="display">WHAT'S UP</h2>
+
+      <div class="frame frame--block" data-label="about">
+        <div class="about__grid">
+          <!-- left -->
+          <article class="card card--statement">
+            <div class="card__head">
+              <span class="quote" aria-hidden="true">&ldquo;</span>
+              <span class="mono-label">STATEMENT.TXT</span>
+            </div>
+            <p class="statement">
+              I don't build demos. I build the thing that
+              <em>actually ships</em>.
+            </p>
+            <p class="prose">
+              AI &amp; Data Science undergrad at DJ Sanghvi, Mumbai. I spend most of my time on agentic systems
+              and full-stack platforms — LLM agents that do real work, backends that hold up, and interfaces
+              people understand on the first try. Seven hackathon wins later, the lesson is the same: a working
+              prototype beats a beautiful deck.
+            </p>
+
+            <p class="mono-label mt-auto">CAPABILITIES</p>
+            <ul class="chips chips--cap">
+              <li><span class="chips__ico">◆</span>GenAI &amp; LLM Agents</li>
+              <li><span class="chips__ico">&lt;/&gt;</span>Full Stack Dev</li>
+              <li><span class="chips__ico">◇</span>Machine Learning</li>
+              <li><span class="chips__ico">✦</span>LangChain · CrewAI</li>
+              <li><span class="chips__ico">▲</span>FastAPI &amp; Flask</li>
+              <li><span class="chips__ico">⚡</span>Automation · n8n</li>
+            </ul>
+          </article>
+
+          <!-- right -->
+          <div class="about__side">
+            <figure class="card card--portrait">
+              <div class="card--portrait__labels">
+                <span><span class="dot dot--orange"></span>ON LOCATION</span>
+                <span>PORTRAIT.JPG</span>
+              </div>
+              <img src="assets/img/shreyas.png" width="443" height="381"
+                alt="Shreyas Kale, AI &amp; Data Science student and full stack developer" />
+              <figcaption>
+                <strong>Shreyas Kale</strong>
+                <span>GENAI &middot; FULL STACK &middot; ML &middot; MUMBAI, INDIA</span>
+              </figcaption>
+            </figure>
+
+            <section class="card card--metrics" aria-label="Key metrics">
+              <div class="card__head">
+                <span class="mono-label mono-label--light">KEY METRICS</span>
+                <span class="mono-label mono-label--light">METRICS</span>
+              </div>
+              <dl>
+                <div><dt data-count="7" data-suffix="×">7×</dt><dd>HACKATHONS WON</dd></div>
+                <div><dt>Top 8<span class="star">★</span></dt><dd>ICPC COLLEGE LEVEL 2025</dd></div>
+                <div><dt data-count="9.20">9.20</dt><dd>CGPA · AI &amp; DATA SCIENCE</dd></div>
+                <div><dt data-count="2">2</dt><dd>INTERNSHIPS SHIPPED</dd></div>
+              </dl>
+            </section>
+
+            <section class="card card--flow" aria-label="How a build runs">
+              <div class="card__head">
+                <span class="mono-label">LIVE WORKFLOW</span>
+                <span class="mono-label mono-label--accent">INTERACTIVE</span>
+              </div>
+              <ol class="flow">
+                <li class="flow__node" data-state="READY">
+                  <span class="flow__ico">⬡</span>
+                  <span class="flow__name">Trigger<em>Webhook · n8n</em></span>
+                  <span class="flow__state">READY</span>
+                </li>
+                <li class="flow__node" data-state="RUNNING">
+                  <span class="flow__ico">◈</span>
+                  <span class="flow__name">AI Agent<em>LangChain · GPT</em></span>
+                  <span class="flow__state">RUNNING</span>
+                </li>
+                <li class="flow__node" data-state="READY">
+                  <span class="flow__ico">▤</span>
+                  <span class="flow__name">Store<em>MongoDB · Postgres</em></span>
+                  <span class="flow__state">READY</span>
+                </li>
+              </ol>
+              <p class="flow__foot"><span class="dot dot--green"></span>AUTOMATED LIVE &mdash; N8N ✦ WORKFLOW</p>
+            </section>
+
+            <section class="card card--edu" aria-label="Education">
+              <span class="mono-label">EDUCATION.TXT</span>
+              <h3>Dwarkadas J. Sanghvi College of Engineering</h3>
+              <p>B.Tech, Artificial Intelligence &amp; Data Science &middot; Sep 2024 &ndash; May 2028</p>
+              <ul class="chips">
+                <li>CGPA 9.20</li>
+                <li>Mumbai, India</li>
+              </ul>
+            </section>
+
+            <section class="card card--building" aria-label="Currently building in">
+              <span class="mono-label mono-label--accent">▸ CURRENTLY BUILDING IN</span>
+              <p class="building__line">LangChain, FastAPI &amp; Next.js</p>
+              <ul class="chips">
+                <li>Python</li>
+                <li>TypeScript</li>
+                <li>LangChain</li>
+                <li>CrewAI</li>
+                <li>FastAPI</li>
+                <li>MongoDB</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░░░░ PROCESS ░░░░░░ -->
+    <section class="section process" id="process">
+      <p class="eyebrow">how i build</p>
+      <h2 class="display display--center">NO FLUFF.<br />JUST SHIPPING.</h2>
+      <p class="tooltip">One thread, zero chaos. Here's how a build actually goes.</p>
+
+      <div class="frame frame--block" data-label="build-log.fig">
+        <div class="thread">
+          <div class="thread__bar">
+            <span class="thread__title"><span class="dot dot--grey"></span>shreyas-kale x your-team</span>
+            <span class="thread__right"><span class="ava ava--b">YT</span><span class="ava ava--a">SK</span>
+              <span class="dot dot--green"></span>2 online</span>
+          </div>
+
+          <div class="thread__body">
+            <p class="thread__stage">01 · BRIEF &amp; SCOPE</p>
+            <div class="msg">
+              <span class="ava ava--b">YT</span>
+              <div>
+                <p class="msg__meta">You <time>10:02</time></p>
+                <div class="bubble">Here's the problem. Users drop off before they finish onboarding and we can't tell
+                  where.</div>
+              </div>
+            </div>
+            <div class="msg msg--me">
+              <span class="ava ava--a">SK</span>
+              <div>
+                <p class="msg__meta">Shreyas <time>10:06</time></p>
+                <div class="bubble bubble--me">Before I write code — what does "fixed" look like in a number? That's
+                  the scope.</div>
+              </div>
+            </div>
+
+            <p class="thread__stage">02 · PROTOTYPE</p>
+            <div class="msg msg--me">
+              <span class="ava ava--a">SK</span>
+              <div>
+                <p class="msg__meta">Shreyas <time>Day 2</time></p>
+                <div class="bubble bubble--me">Thinnest end-to-end slice first: real data in, real answer out. Ugly
+                  but true.</div>
+                <button class="attach" type="button" data-clickable>
+                  <span aria-hidden="true">◼</span> prototype-v0.app
+                </button>
+              </div>
+            </div>
+
+            <p class="thread__stage">03 · ITERATE</p>
+            <div class="msg">
+              <span class="ava ava--b">YT</span>
+              <div>
+                <p class="msg__meta">You <time>Day 4</time></p>
+                <div class="bubble">Can it handle the messy records too?</div>
+              </div>
+            </div>
+            <div class="msg msg--me">
+              <span class="ava ava--a">SK</span>
+              <div>
+                <p class="msg__meta">Shreyas <time>Day 4</time></p>
+                <div class="bubble bubble--me">That's the part I test first. Edge cases decide whether this survives
+                  contact with production.</div>
+              </div>
+            </div>
+
+            <p class="thread__stage">04 · SHIP</p>
+            <div class="msg msg--me">
+              <span class="ava ava--a">SK</span>
+              <div>
+                <p class="msg__meta">Shreyas <time>Day 6</time></p>
+                <div class="bubble bubble--me">Deployed, documented, handed over ✨ Metrics on the dashboard, not in
+                  a slide.</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="thread__foot"><span class="ava ava--a">SK</span>An illustration of how I work &mdash; not a real
+            transcript ✦</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░░░░ WORK ░░░░░░ -->
+    <section class="work" id="work">
+      <div class="work__pin">
+        <div class="work__head">
+          <div>
+            <span class="tooltip tooltip--sm">6 projects built end to end ✦</span>
+            <h2 class="display">Featured Projects</h2>
+          </div>
+          <span class="mono-label">SCROLL TO EXPLORE WORK ▸</span>
+        </div>
+
+        <div class="rail" id="rail">
+          <div class="rail__track" id="railTrack">
+
+            <!-- 01 -->
+            <article class="frame frame--card" data-label="01 email-seq">
+              <div class="pcard">
+                <div class="pcard__left">
+                  <p class="pcard__idx"><span>01</span><em>✦ FEATURED BUILD</em></p>
+                  <h3 class="pcard__title">Email Sequencing <span>Module.</span></h3>
+                  <p class="prose">AI-driven email automation that sends, receives and replies on its own — built to
+                    keep lead generation moving without a human in every loop.</p>
+                  <div class="pcard__meta">
+                    <div>
+                      <p class="mono-label">THE WORK</p>
+                      <p class="pcard__work">A queue-backed sequencing engine: scheduled sends, inbox parsing and
+                        LLM-generated replies that stay on-thread, with Redis and BullMQ carrying the jobs so nothing
+                        is dropped or double-sent.</p>
+                    </div>
+                    <div>
+                      <p class="mono-label">DELIVERABLES &amp; TECH STACK</p>
+                      <ul class="chips chips--mono">
+                        <li>React</li><li>TypeScript</li><li>Node.js</li><li>MongoDB</li><li>Redis</li>
+                        <li>BullMQ</li><li>LLM APIs</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="pcard__right">
+                  <div class="browser">
+                    <div class="browser__bar"><i></i><i></i><i></i><span>github.com/shreyascoder2006/Email_Seq</span>
+                    </div>
+                    <div class="browser__screen browser__screen--mail">
+                      <span class="browser__glyph">✉</span>
+                      <span class="browser__name">EMAIL SEQ</span>
+                      <span class="browser__sub">AUTOMATED OUTREACH</span>
+                    </div>
+                  </div>
+                  <a class="btn btn--small" href="https://github.com/shreyascoder2006/Email_Seq" target="_blank"
+                    rel="noopener" data-clickable>View repository <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 02 -->
+            <article class="frame frame--card" data-label="02 nexus-carbon">
+              <div class="pcard">
+                <div class="pcard__left">
+                  <p class="pcard__idx"><span>02</span><em>✦ FEATURED BUILD</em></p>
+                  <h3 class="pcard__title">Nexus Carbon <span>Circular Economy.</span></h3>
+                  <p class="prose">A decarbonisation platform for factories: see where emissions actually come from,
+                    simulate the fix, and match waste streams to nearby buyers so carbon loops close instead of
+                    leaking.</p>
+                  <div class="pcard__meta">
+                    <div>
+                      <p class="mono-label">THE WORK</p>
+                      <p class="pcard__work">Process-level emissions intake, an ML model for benchmark deviation and
+                        sequential-residual intervention sizing, a 3D digital twin of the plant, and a byproduct
+                        marketplace matched within economic transport radii.</p>
+                    </div>
+                    <div>
+                      <p class="mono-label">DELIVERABLES &amp; TECH STACK</p>
+                      <ul class="chips chips--mono">
+                        <li>React 19</li><li>Three.js</li><li>FastAPI</li><li>LightGBM</li><li>FAISS</li>
+                        <li>Python</li><li>Tailwind</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="pcard__right">
+                  <div class="browser">
+                    <div class="browser__bar"><i></i><i></i><i></i>
+                      <span>github.com/shreyascoder2006/gandhinagar_hackout</span>
+                    </div>
+                    <div class="browser__screen browser__screen--carbon">
+                      <span class="browser__glyph">◉</span>
+                      <span class="browser__name">NEXUS CARBON</span>
+                      <span class="browser__sub">CIRCULAR CARBON INTELLIGENCE</span>
+                    </div>
+                  </div>
+                  <a class="btn btn--small" href="https://github.com/shreyascoder2006/gandhinagar_hackout"
+                    target="_blank" rel="noopener" data-clickable>View repository <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 03 -->
+            <article class="frame frame--card" data-label="03 resort-x">
+              <div class="pcard">
+                <div class="pcard__left">
+                  <p class="pcard__idx"><span>03</span><em>✦ FEATURED BUILD</em></p>
+                  <h3 class="pcard__title">Resort X <span>Revenue Intelligence.</span></h3>
+                  <p class="prose">Resort operations in one decision layer — dynamic room pricing, inventory and
+                    staffing that react to demand, and a guest experience engine that catches problems before a
+                    review does.</p>
+                  <div class="pcard__meta">
+                    <div>
+                      <p class="mono-label">THE WORK</p>
+                      <p class="pcard__work">Six engines — pricing, sentiment, maintenance, staffing, inventory and an
+                        LLM concierge — exposed as APIs and composed into a scenario simulator that recomputes real
+                        before/after KPIs from the same code the dashboard runs on.</p>
+                    </div>
+                    <div>
+                      <p class="mono-label">DELIVERABLES &amp; TECH STACK</p>
+                      <ul class="chips chips--mono">
+                        <li>Next.js</li><li>TypeScript</li><li>Gemini API</li><li>Claude API</li>
+                        <li>Recharts</li><li>Tailwind</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="pcard__right">
+                  <div class="browser">
+                    <div class="browser__bar"><i></i><i></i><i></i>
+                      <span>github.com/shreyascoder2006/resort_revenue_optimization</span>
+                    </div>
+                    <div class="browser__screen browser__screen--resort">
+                      <span class="browser__glyph">▦</span>
+                      <span class="browser__name">RESORT X</span>
+                      <span class="browser__sub">REVENUE · OPS · GUEST AI</span>
+                    </div>
+                  </div>
+                  <a class="btn btn--small" href="https://github.com/shreyascoder2006/resort_revenue_optimization"
+                    target="_blank" rel="noopener" data-clickable>View repository <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 04 -->
+            <article class="frame frame--card" data-label="04 logi-x">
+              <div class="pcard">
+                <div class="pcard__left">
+                  <p class="pcard__idx"><span>04</span><em>✦ BUILD</em></p>
+                  <h3 class="pcard__title">Logi-X <span>Logistics &amp; Supply Chain.</span></h3>
+                  <p class="prose">End-to-end logistics platform managing shipment tracking, inventory and order
+                    fulfilment across the supply chain.</p>
+                  <div class="pcard__meta">
+                    <div>
+                      <p class="mono-label">THE WORK</p>
+                      <p class="pcard__work">Real-time tracking, warehouse monitoring and automated order management,
+                        on backend APIs and database models designed for logistics and shipment data.</p>
+                    </div>
+                    <div>
+                      <p class="mono-label">DELIVERABLES &amp; TECH STACK</p>
+                      <ul class="chips chips--mono">
+                        <li>Flask</li><li>Python</li><li>REST APIs</li><li>PostgreSQL</li><li>JavaScript</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="pcard__right">
+                  <div class="browser">
+                    <div class="browser__bar"><i></i><i></i><i></i><span>logi-x · internal</span></div>
+                    <div class="browser__screen browser__screen--logi">
+                      <span class="browser__glyph">⬢</span>
+                      <span class="browser__name">LOGI-X</span>
+                      <span class="browser__sub">SHIPMENT · INVENTORY · ORDERS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 05 -->
+            <article class="frame frame--card" data-label="05 smart-clubs">
+              <div class="pcard">
+                <div class="pcard__left">
+                  <p class="pcard__idx"><span>05</span><em>✦ BUILD</em></p>
+                  <h3 class="pcard__title">Smart Clubs <span>Portal.</span></h3>
+                  <p class="prose">Full-stack college club management system with role-based dashboards, event
+                    tracking and financial analytics.</p>
+                  <div class="pcard__meta">
+                    <div>
+                      <p class="mono-label">THE WORK</p>
+                      <p class="pcard__work">JWT authentication, REST APIs, video-based discovery and real-time
+                        dashboards, plus AI poster analysis built on Gemini with OCR.</p>
+                    </div>
+                    <div>
+                      <p class="mono-label">DELIVERABLES &amp; TECH STACK</p>
+                      <ul class="chips chips--mono">
+                        <li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Gemini</li>
+                        <li>OCR</li><li>LangChain</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="pcard__right">
+                  <div class="browser">
+                    <div class="browser__bar"><i></i><i></i><i></i><span>smart-clubs · campus</span></div>
+                    <div class="browser__screen browser__screen--clubs">
+                      <span class="browser__glyph">◎</span>
+                      <span class="browser__name">SMART CLUBS</span>
+                      <span class="browser__sub">EVENTS · ROLES · ANALYTICS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 06 -->
+            <article class="frame frame--card" data-label="06 sipify">
+              <div class="pcard">
+                <div class="pcard__left">
+                  <p class="pcard__idx"><span>06</span><em>✦ BUILD</em></p>
+                  <h3 class="pcard__title">SIPify <span>Mutual Fund Investing.</span></h3>
+                  <p class="prose">An investment platform that turns SIPs into curated, playlist-style portfolios
+                    with AI-based fund recommendations.</p>
+                  <div class="pcard__meta">
+                    <div>
+                      <p class="mono-label">THE WORK</p>
+                      <p class="pcard__work">One-tap SIP creation, pause/skip instalments and real-time NAV tracking,
+                        with portfolio analytics, investment streaks and an annual "SIPify Wrapped" summary.</p>
+                    </div>
+                    <div>
+                      <p class="mono-label">DELIVERABLES &amp; TECH STACK</p>
+                      <ul class="chips chips--mono">
+                        <li>React</li><li>Node.js</li><li>MongoDB</li><li>REST APIs</li><li>Analytics</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="pcard__right">
+                  <div class="browser">
+                    <div class="browser__bar"><i></i><i></i><i></i><span>sipify · fintech</span></div>
+                    <div class="browser__screen browser__screen--sip">
+                      <span class="browser__glyph">▲</span>
+                      <span class="browser__name">SIPIFY</span>
+                      <span class="browser__sub">SIP · NAV · WRAPPED</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="work__foot">
+          <span class="mono-label" id="workCount">01 / 06 PROJECTS</span>
+          <span class="work__progress"><i id="workProgress"></i></span>
+          <span class="mono-label">END OF FEATURED BUILDS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░░░░ EXPERIENCE ░░░░░░ -->
+    <section class="section experience" id="experience">
+      <p class="eyebrow">where I have shipped</p>
+      <h2 class="display display--center">EXPERIENCE</h2>
+      <p class="tooltip">The good kind of name-drop. Hover to peek.</p>
+
+      <div class="exp">
+        <div class="frame frame--row" data-label="exp /01">
+          <article class="exprow" data-lift>
+            <span class="exprow__idx">/01</span>
+            <div class="exprow__main">
+              <h3>Cloud Lead Technologies <span class="badge"><span class="dot dot--orange"></span>AI PRODUCT
+                  INTERN</span></h3>
+              <p class="exprow__role">AI Product Intern</p>
+              <ul class="chips chips--mono">
+                <li>LangChain</li><li>OpenAI API</li><li>AutoGen</li><li>CrewAI</li><li>FastAPI</li>
+              </ul>
+              <p class="exprow__peek">AI CUSTOMER SUPPORT AGENT · AGENT WORKFLOWS · PRDs &amp; ROADMAPS</p>
+            </div>
+            <span class="exprow__date">Dec 2025 &mdash; Present</span>
+            <span class="exprow__arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
+
+        <div class="frame frame--row" data-label="exp /02">
+          <article class="exprow" data-lift>
+            <span class="exprow__idx">/02</span>
+            <div class="exprow__main">
+              <h3>Candor Investing <span class="badge"><span class="dot dot--orange"></span>FINANCE ANALYST</span>
+              </h3>
+              <p class="exprow__role">Finance Analyst Intern</p>
+              <ul class="chips chips--mono">
+                <li>Financial Analysis</li><li>Market Research</li><li>Excel</li><li>Reporting</li>
+              </ul>
+              <p class="exprow__peek">EQUITY &amp; FUND RESEARCH · ANALYST REPORTING</p>
+            </div>
+            <span class="exprow__date exprow__date--tbd">Internship</span>
+            <span class="exprow__arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
+
+        <div class="frame frame--row" data-label="exp /03">
+          <article class="exprow" data-lift>
+            <span class="exprow__idx">/03</span>
+            <div class="exprow__main">
+              <h3>DJ Sanghvi College of Engineering <span class="badge"><span class="dot dot--orange"></span>B.TECH ·
+                  AI &amp; DS</span></h3>
+              <p class="exprow__role">Artificial Intelligence &amp; Data Science</p>
+              <ul class="chips chips--mono">
+                <li>CGPA 9.20</li><li>Mumbai</li><li>Class of 2028</li>
+              </ul>
+              <p class="exprow__peek">7× HACKATHON WINNER · TOP 8 ICPC COLLEGE LEVEL 2025</p>
+            </div>
+            <span class="exprow__date">Sep 2024 &mdash; May 2028</span>
+            <span class="exprow__arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="wins">
+        <p class="mono-label">WINS &amp; PODIUMS</p>
+        <div class="wins__marquee" aria-label="Hackathon wins">
+          <div class="wins__track">
+            <span>Winner — Zenith 1.0, Sathe College</span><i>✦</i>
+            <span>Winner — Hack-Out, DA-IICT Gandhinagar</span><i>✦</i>
+            <span>Winner — Craft Verse 2.0, PCCOER Pune</span><i>✦</i>
+            <span>Winner — PCCOE Hackathon 2025, Pune</span><i>✦</i>
+            <span>Winner — Thakur College Hackathon 2025</span><i>✦</i>
+            <span>Winner — PICT Hackathon 2025</span><i>✦</i>
+            <span>Finalist (Top 8) — SPIT Codeathon 2025</span><i>✦</i>
+            <span>Top 8 — ICPC College Level 2025, DJ Sanghvi</span><i>✦</i>
+          </div>
+        </div>
+      </div>
+
+      <div class="ta-c">
+        <a class="btn btn--ghost" href="assets/Shreyas_Kale_Resume.pdf" target="_blank" rel="noopener"
+          data-clickable>VIEW FULL RESUME (PDF)</a>
+      </div>
+    </section>
+
+    <!-- ░░░░░░ CONTACT ░░░░░░ -->
+    <section class="contact" id="contact">
+      <div class="sky sky--contact" aria-hidden="true">
+        <span class="cloud" style="--t:14%;--l:10%;--w:36vw;--h:13vw;--o:.6;--b:40px;--d:-4s"></span>
+        <span class="cloud" style="--t:40%;--l:66%;--w:42vw;--h:15vw;--o:.5;--b:50px;--d:-14s"></span>
+        <span class="cloud" style="--t:70%;--l:20%;--w:48vw;--h:16vw;--o:.45;--b:56px;--d:-22s"></span>
+      </div>
+
+      <div class="section contact__inner">
+        <p class="eyebrow">let's connect</p>
+        <h2 class="display display--center">STUDENT BY DAY,<br /><span class="accent">DEVELOPER BY NIGHT.</span></h2>
+        <p class="contact__lede">
+          AI &amp; Data Science student in Mumbai building full-stack &amp; GenAI applications. Got a project idea,
+          an internship opening, or just want to talk shop? <strong>Drop a line below!</strong>
+        </p>
+
+        <p class="tooltip tooltip--time">
+          <span class="tooltip__ico" aria-hidden="true">☕</span>
+          <span>It's <strong id="mumbaiTime">--:--</strong>, probably Shreyas is deep in a build</span>
+          <span class="tooltip__live"><span class="dot dot--green"></span>LIVE IN MUMBAI</span>
+        </p>
+
+        <div class="contact__grid">
+          <div class="frame frame--block" data-label="new-thread.fig">
+            <form class="card card--form" id="contactForm" novalidate>
+              <div class="card__head">
+                <span class="form__file"><span class="dot dot--orange"></span>new-thread.fig <em>DRAFT</em></span>
+                <span class="ava ava--a">SK</span>
+              </div>
+              <p class="form__hint">Rough is fine. A messy idea today beats a polished brief in three weeks.</p>
+
+              <div class="form__row">
+                <label>
+                  <span class="mono-label">WHO ARE YOU *</span>
+                  <input type="text" name="name" required placeholder="Name, and what you do" data-clickable />
+                </label>
+                <label>
+                  <span class="mono-label">WHERE TO REPLY *</span>
+                  <input type="email" name="email" required placeholder="your@email.com" data-clickable />
+                </label>
+              </div>
+              <label class="form__brief">
+                <span class="mono-label">THE BRIEF *</span>
+                <textarea name="brief" rows="5" required
+                  placeholder="What are you building, who is it for, and roughly when does it need to be live? Bullet points welcome."
+                  data-clickable></textarea>
+              </label>
+
+              <button class="btn btn--primary btn--block" type="submit" data-clickable>SEND IT <span
+                  aria-hidden="true">↗</span></button>
+              <p class="form__note" id="formNote">This opens your mail app with the message ready — it lands straight
+                in my inbox, and I read every single one.</p>
+            </form>
+          </div>
+
+          <div class="contact__side">
+            <section class="card card--mail">
+              <span class="mono-label">■ STILL LIKE EMAIL?</span>
+              <p class="mail__addr">shreyaskale06@gmail.com</p>
+              <p class="prose">Lands directly in my personal inbox. Forward a spec, paste a link, or just say hi and
+                I'll take it from there.</p>
+              <button class="btn btn--small" type="button" id="copyMail" data-clickable>
+                <span aria-hidden="true">⧉</span> <span id="copyMailText">Copy address</span>
+              </button>
+            </section>
+
+            <section class="card card--avail">
+              <span class="mono-label mono-label--green"><span class="dot dot--green"></span>ONLINE, AND TAKING
+                WORK</span>
+              <h3>Open for 2026 internships</h3>
+              <p class="prose">Based in Mumbai (IST), happy to work remote and overlap with other time zones.
+                Available for internships, freelance builds and hackathon teams.</p>
+            </section>
+
+            <section class="card card--links">
+              <span class="mono-label">FIND ME</span>
+              <ul>
+                <li><a href="https://github.com/shreyascoder2006" target="_blank" rel="noopener" data-clickable>GitHub
+                    <span aria-hidden="true">↗</span></a></li>
+                <li><a href="mailto:shreyaskale06@gmail.com" data-mail>Email <span aria-hidden="true">↗</span></a>
+                </li>
+                <li><a href="assets/Shreyas_Kale_Resume.pdf" target="_blank" rel="noopener" data-clickable>Résumé
+                    (PDF) <span aria-hidden="true">↗</span></a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ░░░░░░ FOOTER ░░░░░░ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <span class="mono-label mono-label--light"><span class="dot dot--orange"></span>FOOTER.FRAME</span>
+      <button class="totop" type="button" id="toTop" aria-label="Scroll to top" data-clickable>↑</button>
+    </div>
+
+    <div class="footer__grid">
+      <div>
+        <p class="footer__kicker">HAVE AN IDEA WORTH BUILDING?</p>
+        <a class="footer__mail" href="mailto:shreyaskale06@gmail.com" data-mail>shreyaskale06@gmail.com <span
+            aria-hidden="true">↗</span></a>
+        <div class="footer__cta">
+          <a class="btn btn--primary" href="#contact" data-nav data-clickable>Let's connect <span
+              aria-hidden="true">↗</span></a>
+          <span class="chrome__pill chrome__pill--dark"><span class="dot dot--green"></span>available for
+            projects</span>
+        </div>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer">
+        <div>
+          <p class="mono-label mono-label--light">NAVIGATION</p>
+          <ul>
+            <li><a href="#about" data-nav>About</a></li>
+            <li><a href="#work" data-nav>Work</a></li>
+            <li><a href="#experience" data-nav>Experience</a></li>
+            <li><a href="#contact" data-nav>Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="mono-label mono-label--light">CONNECT</p>
+          <ul>
+            <li><a href="https://github.com/shreyascoder2006" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:shreyaskale06@gmail.com">Email</a></li>
+            <li><a href="assets/Shreyas_Kale_Resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="mono-label mono-label--light">LOCATION</p>
+          <p class="footer__loc">Mumbai, India<br />IST (UTC+5:30)</p>
+        </div>
+      </nav>
+    </div>
+
+    <p class="footer__wordmark" aria-hidden="true"><span>S</span>hreyasKale</p>
+
+    <div class="footer__bottom">
+      <span class="mono-label mono-label--light"><span class="dot dot--orange"></span>shreyas kale · portfolio</span>
+      <span class="mono-label mono-label--light">© 2026 · built by shreyas kale</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
