@@ -399,8 +399,13 @@ h1, h2, h3, p, figure { margin: 0; }
 
 /* ---------- ABOUT ---------- */
 .about .frame--block, .process .frame--block { margin-top: 62px; }
+
+/* About: a statement beside the portrait, then a card shelf, then the method. */
 .about__grid { display: grid; gap: 22px; }
-@media (min-width: 980px) { .about__grid { grid-template-columns: 1.08fr .92fr; align-items: start; } }
+@media (min-width: 980px) { .about__grid { grid-template-columns: 1.08fr .92fr; align-items: stretch; } }
+
+.about__cards { display: grid; gap: 22px; margin-top: 22px; }
+@media (min-width: 760px) { .about__cards { grid-template-columns: 1fr 1fr; align-items: stretch; } }
 
 .card {
   position: relative; background: #fff; border: 1px solid var(--line);
@@ -412,6 +417,7 @@ h1, h2, h3, p, figure { margin: 0; }
 .card--statement { display: flex; flex-direction: column; }
 .statement { font-size: clamp(26px, 3.3vw, 38px); line-height: 1.12; font-weight: 600; letter-spacing: -.02em; margin-bottom: 18px; }
 .statement em { font-style: normal; color: var(--accent); }
+.card--statement .prose + .mono-label { margin-top: 26px; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .chips li {
@@ -425,38 +431,58 @@ h1, h2, h3, p, figure { margin: 0; }
 .chips__ico { color: var(--accent); font-size: 11px; }
 .chips--mono li { font-family: var(--mono); font-size: 11.5px; letter-spacing: .02em; background: #f4f6f9; border-color: transparent; padding: 6px 11px; border-radius: 8px; }
 
-/* GitHub panel — fills the statement column against the taller right rail */
-.gh { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
-.gh__head { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 16px; }
-.gh__head a { font-family: var(--mono); font-size: 12px; color: var(--ink-70); transition: color .2s; }
-.gh__head a:hover { color: var(--accent); }
-
-.gh__summary { background: var(--paper-2); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin-bottom: 20px; }
-.gh__count { display: flex; align-items: baseline; gap: 9px; }
-.gh__count strong { font-size: 30px; font-weight: 700; letter-spacing: -.02em; }
-.gh__count span { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-45); }
-.gh__bar { display: flex; gap: 2px; height: 6px; margin: 13px 0 12px; }
-.gh__bar i { width: var(--w); background: var(--c); border-radius: 2px; }
-.gh__langs { display: flex; flex-wrap: wrap; gap: 6px 16px; }
-.gh__langs li { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--ink-70); }
-.gh__langs em { font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--ink-45); }
-.lang-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--c); flex: none; }
-
-.gh__list { display: grid; gap: 1px; margin-top: 10px; }
-.gh__list a {
-  display: flex; align-items: center; gap: 10px; padding: 9px 2px;
-  border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 12.5px;
-  transition: color .2s, padding-left .2s var(--ease);
+/* BUILD AND SHIP — the method, numbered because it really is a sequence */
+.method {
+  margin-top: 22px; padding: 34px; background: #fff;
+  border: 1px solid var(--line); border-radius: var(--r-card); box-shadow: var(--shadow);
 }
-.gh__list li:last-child a { border-bottom: 0; }
-.gh__list a:hover { color: var(--accent); padding-left: 6px; }
-.gh__list em { margin-left: auto; font-style: normal; font-size: 11px; color: var(--ink-45); }
-.gh + .mono-label { margin-top: 26px; }
+@media (max-width: 560px) { .method { padding: 24px 20px; } }
+.method__head h3 {
+  font-size: clamp(24px, 3vw, 32px); font-weight: 700; letter-spacing: -.01em;
+  text-transform: uppercase; line-height: 1;
+}
+.method__head h3::after {
+  content: ""; display: block; width: 46px; height: 3px; margin-top: 12px;
+  background: var(--accent); border-radius: 3px;
+}
+.method__head p { margin-top: 14px; max-width: 62ch; color: var(--ink-70); font-size: 16px; line-height: 1.62; }
+
+.method__list { display: grid; gap: 10px; margin-top: 28px; }
+@media (min-width: 900px) {
+  .method__list { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .method__list li:last-child { grid-column: 1 / -1; }
+}
+.method__list li {
+  display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start;
+  padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper-2);
+  transition: border-color .3s var(--ease), background .3s var(--ease), transform .3s var(--ease);
+}
+.method__list li:hover { background: #fff; border-color: rgba(255, 90, 31, .4); transform: translateY(-2px); }
+.method__n {
+  display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px;
+  background: #fff; border: 1px solid var(--line);
+  font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--accent);
+}
+.method__list li:hover .method__n { background: var(--accent); border-color: var(--accent); color: #fff; }
+.method__list h4 { font-size: 17.5px; font-weight: 600; letter-spacing: -.01em; margin-bottom: 7px; }
+.method__list li:hover h4 { color: var(--accent); }
+.method__list p { font-size: 14.5px; line-height: 1.62; color: var(--ink-70); }
+
+.method__foot {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+  margin-top: 16px; padding: 18px 20px; border-radius: 18px;
+  background: var(--night); color: rgba(255, 255, 255, .78);
+  font-family: var(--mono); font-size: 12.5px; line-height: 1.7;
+}
+
+@media (max-width: 560px) {
+  .method__list li { padding: 14px 10px; gap: 12px; }
+}
 
 .about__side { display: grid; gap: 22px; }
 
-.card--portrait { padding: 0; overflow: hidden; background: #11161f; border: 0; }
-.card--portrait img { width: 100%; height: auto; object-fit: cover; }
+.card--portrait { padding: 0; overflow: hidden; background: #11161f; border: 0; min-height: 440px; }
+.card--portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
 .card--portrait__labels {
   position: absolute; inset: 18px 18px auto; display: flex; justify-content: space-between; z-index: 2;
   font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; color: rgba(255, 255, 255, .72);
