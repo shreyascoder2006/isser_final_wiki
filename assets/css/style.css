@@ -1060,6 +1060,77 @@ section {
   color: var(--ink-soft);
 }
 
+/* ---- World map (pre-rendered SVG, Natural Earth projection) ---- */
+
+.world-map-wrap {
+  margin-top: 2.5rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.6rem clamp(1rem, 3vw, 2rem) 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.world-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-land {
+  fill: var(--teal);
+  stroke: none;
+}
+
+.map-dot {
+  stroke: var(--paper);
+  stroke-width: 1.4;
+  cursor: pointer;
+  transition: r 0.15s ease;
+}
+
+.map-dot:hover {
+  r: 7.5;
+}
+
+.map-dot.cu { fill: var(--accent-2); }
+.map-dot.fe { fill: #8a6d3b; }
+.map-dot.cr { fill: #a53333; }
+.map-dot.ree { fill: var(--accent); }
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+
+.map-legend .item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.map-legend .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.map-legend .dot.cu { background: var(--accent-2); }
+.map-legend .dot.fe { background: #8a6d3b; }
+.map-legend .dot.cr { background: #a53333; }
+.map-legend .dot.ree { background: var(--accent); }
+
+.map-subhead {
+  margin-top: 3rem;
+}
+
 /* ---- Compare: barren vs reclaimed ---- */
 
 .compare-section {
