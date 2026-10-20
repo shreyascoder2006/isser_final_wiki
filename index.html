@@ -20,7 +20,7 @@
   </a>
 
   <ul class="nav-links">
-    <li><a href="#project">Project</a></li>
+    <li><a href="#hook">Project</a></li>
     <li><a href="#dry-lab">Dry Lab</a></li>
     <li><a href="#wet-lab">Wet Lab</a></li>
     <li><a href="#human-practices">Human Practices</a></li>
@@ -63,84 +63,169 @@
     <p class="hero-credit">Footage: <em>The Human Rights Impacts of Coal in the Global South</em> (2015), Dejusticia &amp; Business and Human Rights Resource Centre — coalinthesouth.org. Used with permission.</p>
   </div>
 
-  <a href="#project" class="scroll-cue" aria-label="Scroll down">
+  <a href="#hook" class="scroll-cue" aria-label="Scroll down">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
   </a>
 </header>
 
 <main>
 
+  <!-- ============ HOOK ============ -->
+  <section class="hook" id="hook" data-nav-label="Why">
+    <div class="hook-content">
+      <span class="hook-kicker reveal">A question India's mining belt keeps asking</span>
+      <h2 class="hook-title reveal">"Why am I suffering?"</h2>
+      <p class="hook-sub reveal">Families living beside India's copper, iron and chromium mines have been asking it for decades. Sanjeevani starts with their answer, not ours.</p>
+    </div>
+  </section>
+
+  <!-- ============ DISPLACEMENT ============ -->
+  <section class="pin-card reveal" id="displaced" data-nav-label="Displacement">
+    <div class="container">
+      <div class="pin-media"><img src="assets/img/story/displacement.jpg" alt="Land cleared for mine expansion" loading="lazy" /></div>
+      <div class="pin-text">
+        <span class="pin-no">01</span>
+        <h2>They didn't choose to leave.</h2>
+        <p>You didn't have to leave home today. Across India's mineral belt, thousands have — settlements cleared because they sat on land a company wanted next. Interns from mining-belt districts told us this isn't an isolated incident. It's how expansion usually happens here.</p>
+        <div class="pin-progress"><div class="pin-progress-fill"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CRISIS STATS ============ -->
+  <section class="section-dark crisis-stats" id="crisis" data-nav-label="The Scale">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">How many mines, how much land</span>
+        <h2>This isn't one mine. It's a belt that runs across the country.</h2>
+      </div>
+      <div class="crisis-grid">
+        <div class="crisis-card reveal">
+          <span class="crisis-icon">⛏️</span>
+          <b>88,903 ha</b>
+          <span class="label">forest diverted for mining &amp; infrastructure</span>
+          <span class="note">India, 2018–19 to 2022–23 · MoEFCC</span>
+        </div>
+        <div class="crisis-card reveal">
+          <span class="crisis-icon">🧪</span>
+          <b>13+</b>
+          <span class="label">contamination hotspots mapped</span>
+          <span class="note">copper, iron, chromium(VI) and rare earths</span>
+        </div>
+        <div class="crisis-card reveal">
+          <span class="crisis-icon">📍</span>
+          <b>8</b>
+          <span class="label">states carrying the heaviest share</span>
+          <span class="note">many among the most tribal-dense districts in India</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WATER ============ -->
+  <section class="water-feature" id="water" data-nav-label="The Water">
+    <div class="container">
+      <img src="assets/img/story/water.jpg" alt="Contaminated well water near a mine site" loading="lazy" />
+      <div>
+        <span class="eyebrow">What's left to drink</span>
+        <h2 style="margin-top:0.6rem; font-size:clamp(1.7rem,3vw,2.3rem);">This is groundwater drawn near a mine.</h2>
+        <p style="margin-top:1rem; color:var(--ink-soft);">Kerala's Department of Mining &amp; Geology flagged the limits of simple field assays for metal-contaminated water — it's part of why we moved our own uptake quantification to lab-grade ICP-MS. The water itself needed no instrument to read.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAP ============ -->
+  <section class="map-section" id="map" data-nav-label="Where">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Where it happens</span>
+        <h2>Contamination hotspots across India's mineral belt.</h2>
+        <p>Thirteen sites, eight states, four kinds of contamination — mapped from government and industry sources as the starting point for this project.</p>
+      </div>
+      <div class="map-grid reveal">
+        <div class="map-card"><div class="state">Rajasthan</div><span class="metal">Cu</span><div class="site">Khetri copper belt</div></div>
+        <div class="map-card"><div class="state">Madhya Pradesh</div><span class="metal">Cu</span><div class="site">Malanjkhand</div></div>
+        <div class="map-card"><div class="state">Jharkhand</div><span class="metal">Cu</span><div class="site">Singhbhum belt</div></div>
+        <div class="map-card"><div class="state">Chhattisgarh</div><span class="metal">Fe</span><div class="site">Bailadila, Dalli-Rajhara</div></div>
+        <div class="map-card"><div class="state">Odisha</div><span class="metal">Fe</span><div class="site">Sundargarh, Keonjhar, Koida</div></div>
+        <div class="map-card"><div class="state">Odisha</div><span class="metal">Cr(VI)</span><div class="site">Sukinda Valley</div></div>
+        <div class="map-card"><div class="state">Odisha</div><span class="metal">REE</span><div class="site">OSCOM, Chatrapur</div></div>
+        <div class="map-card"><div class="state">Karnataka</div><span class="metal">Fe</span><div class="site">Kudremukh</div></div>
+        <div class="map-card"><div class="state">Tamil Nadu</div><span class="metal">REE</span><div class="site">Manavalakurichi</div></div>
+        <div class="map-card"><div class="state">Kerala</div><span class="metal">REE</span><div class="site">Chavara</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARE ============ -->
+  <section class="compare-section" id="compare" data-nav-label="Two Approaches">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Two ways this land can go</span>
+        <h2>Left alone, or engineered to heal.</h2>
+        <p>Remediation and recovery are usually treated as two separate problems — clean the site, <em>or</em> extract what's left in it. Sanjeevani is built to do both with the same organism.</p>
+      </div>
+      <div class="compare-grid reveal">
+        <div class="compare-card bad">
+          <img src="assets/img/story/barren-land.jpg" alt="Barren, cracked mine tailings" loading="lazy" />
+          <span class="tag">Left as is</span>
+          <p class="caption">Tailings stay exposed for decades, leaching metal into soil and groundwater — unusable for anything.</p>
+        </div>
+        <div class="compare-card good">
+          <img src="assets/img/moss-photo.jpg" alt="Physcomitrium patens moss, engineered chassis" loading="lazy" />
+          <span class="tag">With Sanjeevani</span>
+          <p class="caption">The same ground, recolonised — metal pulled out and held in biomass that can be harvested and reclaimed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PIVOT ============ -->
+  <section class="pivot reveal" id="pivot">
+    <h2>What if the organism that heals this land could also hand back what the mine was looking for?</h2>
+  </section>
+
+  <!-- ============ INTRODUCING SANJEEVANI ============ -->
+  <section class="intro-reveal" id="intro-sanjeevani" data-nav-label="Introducing Sanjeevani">
+    <div class="container">
+      <span class="eyebrow reveal">Introducing</span>
+      <h2 class="lede reveal">Sanjeevani is a <strong>bioremediation and biomining organism.</strong></h2>
+      <p class="reveal" style="margin-top:1.4rem; max-width:62ch; color:#cfe3de; font-size:1.05rem;">We engineer the moss <em>Physcomitrium patens</em> — a chassis with no cuticle and no true vascular tissue, so every cell meets the water and metal around it directly. Four genes do the work: two transporters pull copper and iron-group metals in, a chelator holds them in place, and a third transporter reaches further, toward rare earths.</p>
+
+      <div class="mechanism-grid">
+        <div class="mechanism-card reveal"><div class="glyph">🌱</div><h4>Whole-body uptake</h4><p>No cuticle, no vascular tissue — metal binds across the entire tissue surface.</p></div>
+        <div class="mechanism-card reveal"><div class="glyph">Cu</div><h4>COPT1</h4><p>High-affinity copper transporter. Cloned and confirmed.</p></div>
+        <div class="mechanism-card reveal"><div class="glyph">Fe</div><h4>IRT1</h4><p>Broad-spectrum iron-group metal transporter.</p></div>
+        <div class="mechanism-card reveal"><div class="glyph">MT</div><h4>AtMT4b</h4><p>Chelator — holds metal inside the cell once it's taken up.</p></div>
+        <div class="mechanism-card reveal"><div class="glyph">REE</div><h4>NREET1</h4><p>Rare-earth transporter, from a hyperaccumulating fern.</p></div>
+        <div class="mechanism-card reveal"><div class="glyph">⛏️</div><h4>Harvest &amp; recover</h4><p>Metal leaves the site bound in biomass — not down into groundwater.</p></div>
+      </div>
+
+      <div class="intro-benefits reveal">
+        <span>Eco-restorative</span>
+        <span>Metal-recovering</span>
+        <span>Built on open moss genetics</span>
+        <span>Grown from India's own mining belt</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ JOURNEY / CONTENTS ============ -->
   <section class="journey" id="journey" data-nav-label="Overview">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">This story runs in six parts</span>
-        <h2>From a cracked mine tailing to a recovered metal.</h2>
-        <p>Sanjeevani treats land remediation and metal recovery as one problem instead of two — engineering a moss that pulls heavy metals out of contaminated ground and holds onto them long enough to be reclaimed.</p>
+        <span class="eyebrow">Ready to dive deeper?</span>
+        <h2>Discover the science, the team, and the journey behind Sanjeevani.</h2>
+        <p>Four more parts: the computational work that chose these genes, the wet lab that's cloning them, the people who reshaped this project, and the classrooms it reached.</p>
       </div>
 
       <div class="journey-grid">
-        <a class="journey-card reveal" href="#project"><span class="num">01</span><h3>The problem &amp; the moss</h3><p>Why India's mine land stays poisoned, and why a moss is the chassis to fix it.</p></a>
-        <a class="journey-card reveal" href="#project"><span class="num">02</span><h3>Methodology</h3><p>The six-stage pipeline from gene selection to recovered metal.</p></a>
-        <a class="journey-card reveal" href="#dry-lab"><span class="num">03</span><h3>Dry Lab</h3><p>Docking screens, genome-scale modelling, and a metabolic map of the moss.</p></a>
-        <a class="journey-card reveal" href="#wet-lab"><span class="num">04</span><h3>Wet Lab</h3><p>Cloning transporters and chelators from <em>Arabidopsis</em> into <em>Physcomitrium</em>.</p></a>
-        <a class="journey-card reveal" href="#human-practices"><span class="num">05</span><h3>Human Practices</h3><p>Eight conversations — with miners, chemists, hospitals and labs — that changed the project.</p></a>
-        <a class="journey-card reveal" href="#education"><span class="num">06</span><h3>Education &amp; Inclusivity</h3><p>Three phases, three states, three languages — reaching tribal schools across mining belts.</p></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROJECT : PROBLEM ============ -->
-  <section id="project" data-nav-label="The Problem">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">01 — The Problem</span>
-        <h2>India's mines leave behind land it cannot use.</h2>
-        <p>Tailings and overburden hold copper, iron and other heavy metals in concentrations that poison soil and groundwater — yet stay too dilute for conventional extraction. Remediation and recovery are treated as two separate problems. We are building an organism that does both at once.</p>
-      </div>
-
-      <div class="bar-list reveal">
-        <div class="bar-row"><span class="label highlight">Mining</span><span class="bar-track"><span class="bar-fill highlight" style="width:97%"></span></span><span class="value">18,847 ha</span></div>
-        <div class="bar-row"><span class="label">Roads</span><span class="bar-track"><span class="bar-fill" style="width:100%"></span></span><span class="value">19,424 ha</span></div>
-        <div class="bar-row"><span class="label">Irrigation</span><span class="bar-track"><span class="bar-fill" style="width:69%"></span></span><span class="value">13,344 ha</span></div>
-        <div class="bar-row"><span class="label">Transmission lines</span><span class="bar-track"><span class="bar-fill" style="width:49%"></span></span><span class="value">9,469 ha</span></div>
-        <div class="bar-row"><span class="label">Defence</span><span class="bar-track"><span class="bar-fill" style="width:39%"></span></span><span class="value">7,630 ha</span></div>
-        <div class="bar-row"><span class="label">Railways</span><span class="bar-track"><span class="bar-fill" style="width:25%"></span></span><span class="value">4,769 ha</span></div>
-      </div>
-      <p class="reveal" style="margin-top:0.8rem; font-size:0.82rem; color:var(--ink-soft);">Forest diverted in India by purpose, 2018–19 to 2022–23 (88,903 ha total). Source: MoEFCC reply to Rajya Sabha.</p>
-
-      <p class="reveal" style="margin-top:2.5rem; max-width:62ch; font-size:1.02rem;"><strong>Madhya Pradesh, Odisha, Jharkhand and Chhattisgarh</strong> — the states absorbing the largest share of mining-driven forest loss — are also among the most tribal-dense districts in the country. Contamination hotspots run the length of the mineral belt: copper around Khetri, Malanjkhand and the Singhbhum belt; iron across Bailadila, Sundargarh and Koida; hexavalent chromium in Odisha's Sukinda Valley; and rare-earth tailings at Chatrapur, Manavalakurichi and Chavara.</p>
-    </div>
-  </section>
-
-  <!-- ============ PROJECT : WHY MOSS + CHASSIS ============ -->
-  <section class="journey" id="moss" data-nav-label="Why Moss">
-    <div class="container split">
-      <div class="reveal" style="order:2;">
-        <span class="eyebrow">Why Moss?</span>
-        <h2 style="margin-top:0.6rem; font-size:clamp(1.7rem,3vw,2.3rem);">Moss absorbs metals across its whole surface.</h2>
-        <p style="margin-top:1rem; color:var(--ink-soft);">No cuticle, no true vascular tissue — every cell meets the water around it. That is why mosses are already used as pollution monitors, and why they are a better starting point than a crop plant.</p>
-        <ul class="split-list">
-          <li><b>01</b><span><strong>Whole-body uptake</strong> — metal ions bind and cross the membrane over the entire tissue surface.</span></li>
-          <li><b>02</b><span><strong>Grows on bare rock</strong> — colonises disturbed, nutrient-poor substrate where crops cannot establish.</span></li>
-          <li><b>03</b><span><strong>Harvestable biomass</strong> — metal leaves the site with the moss mat, instead of moving down into groundwater.</span></li>
-        </ul>
-      </div>
-      <img class="reveal" src="assets/img/moss-photo.jpg" alt="Physcomitrium patens moss" style="order:1;" />
-    </div>
-  </section>
-
-  <section id="chassis" data-nav-label="Our Chassis">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Our Chassis</span>
-        <h2><em>Physcomitrium patens</em> is a chassis we can engineer.</h2>
-      </div>
-      <div class="grid-3">
-        <div class="card reveal"><h4>Fully sequenced genome</h4><p>A mature molecular toolkit built up over two decades of moss genetics.</p></div>
-        <div class="card reveal"><h4>Dominant haploid phase</h4><p>A single edit gives a readable phenotype — no masking by a second allele.</p></div>
-        <div class="card reveal"><h4>Efficient homologous recombination</h4><p>Supports targeted integration at precise genomic loci.</p></div>
-        <div class="card reveal"><h4>Regenerating protonemal tissue</h4><p>New plants regenerate from single cells, so transformation scales.</p></div>
+        <a class="journey-card reveal" href="#methodology"><span class="num">01</span><h3>Methodology</h3><p>The six-stage pipeline from gene selection to recovered metal.</p></a>
+        <a class="journey-card reveal" href="#dry-lab"><span class="num">02</span><h3>Dry Lab</h3><p>Docking screens, genome-scale modelling, and a metabolic map of the moss.</p></a>
+        <a class="journey-card reveal" href="#wet-lab"><span class="num">03</span><h3>Wet Lab</h3><p>Cloning transporters and chelators from <em>Arabidopsis</em> into <em>Physcomitrium</em>.</p></a>
+        <a class="journey-card reveal" href="#human-practices"><span class="num">04</span><h3>Human Practices</h3><p>Eight conversations — with miners, chemists, hospitals and labs — that changed the project.</p></a>
+        <a class="journey-card reveal" href="#education"><span class="num">05</span><h3>Education &amp; Inclusivity</h3><p>Three phases, three states, three languages — reaching tribal schools across mining belts.</p></a>
+        <a class="journey-card reveal" href="#team"><span class="num">06</span><h3>Team</h3><p>The people building Sanjeevani, at IISER Thiruvananthapuram.</p></a>
       </div>
     </div>
   </section>
@@ -149,7 +234,7 @@
   <section class="section-dark" id="methodology" data-nav-label="Methodology">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">02 — Methodology &amp; Thinking</span>
+        <span class="eyebrow">Methodology &amp; Thinking</span>
         <h2>Our pipeline runs from gene to recovered metal.</h2>
       </div>
       <div class="pipeline">

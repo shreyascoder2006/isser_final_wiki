@@ -64,6 +64,47 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
+  // Pinned story cards — slow image zoom once in view, plus a scroll progress bar
+  const pinCards = document.querySelectorAll(".pin-card");
+  const pinObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("in-view", entry.isIntersecting);
+      });
+    },
+    { threshold: 0.25 }
+  );
+  pinCards.forEach((card) => pinObserver.observe(card));
+
+  function updatePinProgress() {
+    const vh = window.innerHeight;
+    pinCards.forEach((card) => {
+      const fill = card.querySelector(".pin-progress-fill");
+      if (!fill) return;
+      const rect = card.getBoundingClientRect();
+      const total = rect.height + vh;
+      const traveled = vh - rect.top;
+      const pct = Math.max(0, Math.min(1, traveled / total));
+      fill.style.width = `${Math.round(pct * 100)}%`;
+    });
+  }
+
+  let pinTicking = false;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!pinTicking) {
+        window.requestAnimationFrame(() => {
+          updatePinProgress();
+          pinTicking = false;
+        });
+        pinTicking = true;
+      }
+    },
+    { passive: true }
+  );
+  updatePinProgress();
+
   // Search overlay
   const sectionIndex = Array.from(sections).map((s) => ({
     id: s.id,
