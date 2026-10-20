@@ -168,4 +168,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (heroFallback) heroFallback.style.display = "block";
     }
   }
+
+  // Main hero footage runs at 1.5x.
+  if (heroVideo) {
+    heroVideo.playbackRate = 1.5;
+    heroVideo.addEventListener("playing", () => {
+      heroVideo.playbackRate = 1.5;
+    });
+  }
 });

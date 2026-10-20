@@ -296,54 +296,14 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(0deg, rgba(5,24,21,0.82) 0%, rgba(5,24,21,0.15) 42%, rgba(5,24,21,0.35) 100%);
+  /* Monsoon-style layered overlay (flat tint + vertical + horizontal gradient)
+     instead of one heavy scrim — there's no text to protect anymore, just a
+     frame around the footage. */
+  background-color: rgba(0, 0, 0, 0.13);
+  background-image:
+    linear-gradient(to bottom, rgba(5,24,21,0.22) 0%, transparent 25%, transparent 60%, rgba(5,24,21,0.3) 100%),
+    linear-gradient(to right, rgba(5,24,21,0.12) 0%, transparent 18%, transparent 82%, rgba(5,24,21,0.12) 100%);
   z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 0 clamp(1.2rem, 5vw, 4rem) clamp(3rem, 7vw, 5rem);
-  color: #fdfaf3;
-}
-
-.hero-content .eyebrow { color: var(--accent); }
-.hero-content .eyebrow::before { background: var(--accent); }
-
-.hero-content h1 {
-  font-size: clamp(2.6rem, 7vw, 5.2rem);
-  margin-top: 0.5rem;
-  max-width: 14ch;
-}
-
-.hero-content .tagline {
-  margin-top: 1rem;
-  font-size: clamp(1rem, 1.6vw, 1.3rem);
-  max-width: 48ch;
-  color: #e3ede9;
-}
-
-.hero-content .hero-credit {
-  margin-top: 1.3rem;
-  font-size: 0.74rem;
-  max-width: 46ch;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.5;
-}
-
-.hero-note {
-  position: absolute;
-  right: 1.1rem;
-  top: 50%;
-  transform: translateY(-50%) rotate(180deg);
-  writing-mode: vertical-rl;
-  font-size: 0.72rem;
-  letter-spacing: 0.03em;
-  color: rgba(255,255,255,0.55);
-  z-index: 2;
-  max-width: 26px;
 }
 
 .scroll-cue {
@@ -360,6 +320,21 @@ section {
 @keyframes bob {
   0%, 100% { transform: translate(-50%, 0); }
   50% { transform: translate(-50%, 8px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 clamp(1.2rem, 5vw, 4rem) clamp(3rem, 7vw, 5rem);
+}
+
+.hero-content h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  color: #fdfaf3;
+  text-shadow: 0 4px 24px rgba(5, 24, 21, 0.55);
+  max-width: 14ch;
 }
 
 /* ---------------- Journey / contents ---------------- */

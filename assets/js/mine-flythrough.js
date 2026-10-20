@@ -123,11 +123,26 @@
     antialias: !isMobile,
   });
   renderer.outputEncoding = THREE.sRGBEncoding;
+  // Filmic tone mapping + atmospheric haze, the two cheapest wins for making a
+  // bare terrain mesh read as photoreal aerial footage instead of a flat render
+  // (same idea gods-eye-view leans on via Cesium's built-in atmosphere/fog —
+  // reimplemented here with Three.js's own primitives, not its code).
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
   renderer.setClearColor(0x06211e, 1);
   const scene = new THREE.Scene();
+  // Linear fog, not exponential: the flight path's own range runs 500-15000m
+  // (see sampleKeys), and FogExp2's distance-squared falloff whites out the
+  // two widest shots entirely at any density that still reads as haze
+  // up close. Linear near/far keeps close shots clear and far ones hazy
+  // without either extreme blowing out.
+  scene.fog = new THREE.Fog(0x0c3430, 4500, 16000);
   const camera = new THREE.PerspectiveCamera(50, 1, 20, 80000);
-  scene.add(new THREE.AmbientLight(0xffffff, 0.62));
-  const sun = new THREE.DirectionalLight(0xffffff, 0.5);
+  // Hemisphere light stands in for bounced sky/ground color (teal sky above,
+  // warm ochre terrain below) instead of flat white ambient.
+  scene.add(new THREE.HemisphereLight(0x8fb6ae, 0x4a3420, 0.65));
+  scene.add(new THREE.AmbientLight(0xffffff, 0.22));
+  const sun = new THREE.DirectionalLight(0xfff3df, 0.75);
   sun.position.set(-3000, 4000, 2500);
   scene.add(sun);
   const world = new THREE.Group();

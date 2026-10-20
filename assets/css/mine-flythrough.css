@@ -154,6 +154,13 @@
   max-width: 70%;
 }
 
+.mf-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 100% at 50% 50%, transparent 55%, rgba(4, 16, 14, 0.55) 100%);
+}
+
 .mf-loader {
   position: absolute;
   inset: 0;
