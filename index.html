@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/mine-flythrough.css" />
 </head>
 <body>
 
@@ -76,6 +77,27 @@
       <span class="hook-kicker reveal">A question India's mining belt keeps asking</span>
       <h2 class="hook-title reveal">"Why am I suffering?"</h2>
       <p class="hook-sub reveal">Families living beside India's copper, iron and chromium mines have been asking it for decades. Sanjeevani starts with their answer, not ours.</p>
+    </div>
+  </section>
+
+  <!-- ============ MINE FLYTHROUGH ============ -->
+  <section class="mf-section" id="mine-flythrough" data-mf-root data-nav-label="The Pit">
+    <div class="mf-scroller" id="mf-scroller">
+      <div class="mf-stage" id="mf-stage">
+        <canvas class="mf-gl" id="mf-gl"></canvas>
+        <svg class="mf-lines" id="mf-lines"></svg>
+        <div id="mf-cards"></div>
+        <div class="mf-title" id="mf-title">
+          <span id="mf-site-name"></span>
+          <small>Scroll to descend into the pit</small>
+        </div>
+        <div class="mf-note" id="mf-note"></div>
+        <div class="mf-hint" id="mf-hint">Scroll &darr;</div>
+        <div class="mf-bar" id="mf-bar"></div>
+        <div class="mf-credit" id="mf-credit"></div>
+        <div class="mf-loader" id="mf-loader">Loading terrain&hellip;</div>
+        <div class="mf-err" id="mf-err"></div>
+      </div>
     </div>
   </section>
 
@@ -501,6 +523,8 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="assets/js/mine-flythrough.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,189 @@
+/* ===========================================================
+   Mine flythrough — scroll-pinned 2D-map-to-3D-terrain scene.
+   Namespaced with mf- to avoid colliding with site/style.css.
+   =========================================================== */
+
+.mf-section {
+  background: var(--bg-dark);
+}
+
+.mf-scroller {
+  position: relative;
+  height: 650vh;
+}
+
+.mf-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+.mf-gl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mf-lines {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.mf-lines line {
+  stroke: var(--accent);
+  stroke-width: 1.4;
+  opacity: 0.85;
+}
+.mf-lines circle {
+  fill: var(--accent);
+  stroke: var(--bg-dark);
+  stroke-width: 1.4;
+}
+
+.mf-card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 280px;
+  box-sizing: border-box;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 0.9rem 1.1rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.mf-card b {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: var(--serif);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+.mf-card p {
+  margin: 0;
+  font-style: italic;
+}
+/* alternate speech-bubble sides, so the conversation reads left/right */
+.mf-card--a { border-left: 3px solid var(--teal-light); }
+.mf-card--b { border-left: 3px solid var(--accent); }
+.mf-card--c { border-left: 3px solid var(--accent-2); }
+
+.mf-title {
+  position: absolute;
+  left: 20px;
+  top: 92px;
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 1rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+.mf-title small {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--sans);
+  opacity: 0.75;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.mf-hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 32px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.mf-bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 0;
+  background: var(--accent);
+  opacity: 0.85;
+}
+
+.mf-credit {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  color: #fff;
+  opacity: 0.6;
+  font-size: 0.68rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  text-align: right;
+  max-width: 60%;
+}
+
+.mf-note {
+  position: absolute;
+  left: 20px;
+  top: 142px;
+  display: none;
+  color: var(--accent);
+  font-size: 0.72rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  max-width: 70%;
+}
+
+.mf-loader {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  transition: opacity 0.4s;
+}
+
+.mf-err {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 94px;
+  z-index: 5;
+  display: none;
+  background: var(--paper);
+  color: #b00020;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  .mf-card { max-width: calc(100vw - 32px); }
+  .mf-scroller { height: 520vh; }
+}
